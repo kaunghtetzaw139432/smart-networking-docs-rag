@@ -14,6 +14,8 @@ This project is a high-level implementation of **Retrieval-Augmented Generation 
 
 ---
 
+<img src="https://github.com/user-attachments/assets/9c669268-83c0-4fd6-84a8-97e38d04f7f8" width="800" alt="System Screenshot">
+
 ## 🎯 Project Objective
 The primary goal of this project is to understand the **System Architecture** of RAG rather than just learning syntax. It explores how unstructured data is processed, stored, and retrieved to augment AI prompts, ensuring the AI operates on private or specific domain knowledge (Computer Networking).
 
