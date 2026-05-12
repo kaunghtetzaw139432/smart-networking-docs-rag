@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <p class="eyebrow">Spring AI FAQ</p>
+            <h1>Ask the backend what it knows.</h1>
+            <p class="intro">
+                This UI calls the existing <code>GET /faq</code> endpoint with a
+                <code>message</code> query parameter and shows the plain-text response.
+            </p>
+        </section>
+
+        <section class="panel">
+            <form id="faq-form" class="ask-form">
+                <label for="message">Question</label>
+                <div class="input-row">
+                    <input
+                        id="message"
+                        name="message"
+                        type="text"
+                        placeholder="What is Networking?"
+                        value="What is Networking?"
+                        required
+                    >
+                    <button type="submit">Ask</button>
+                </div>
+            </form>
+
+            <div class="suggestions" aria-label="Example questions">
+                <button type="button" class="chip" data-question="What is Networking?">Networking</button>
+                <button type="button" class="chip" data-question="What is Spring Boot?">Spring Boot</button>
+                <button type="button" class="chip" data-question="Explain Docker in simple terms.">Docker</button>
+            </div>
+
+            <section class="response-card">
+                <div class="response-meta">
+                    <span id="status">Ready</span>
+                </div>
+                <pre id="answer" class="answer">Your answer will appear here.</pre>
+            </section>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>

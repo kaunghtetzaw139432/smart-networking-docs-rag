@@ -1,0 +1,3785 @@
+Table of Contents
+About the book ............................................................................... 10
+About the author ......................................................................... 11
+Sponsors ...................................................................................... 12
+Ebook PDF Generation Tool ......................................................... 14
+Book Cover .................................................................................. 15
+License ........................................................................................ 16
+Chapter 1: Introduction to Docker ............................................... 17
+What is Docker? .......................................................................... 18
+Why Use Docker? ........................................................................ 19
+Docker Architecture ..................................................................... 20
+Containers vs. Virtual Machines .................................................. 21
+Basic Docker Workﬂow ................................................................ 22
+Docker Components .................................................................... 23
+Use Cases for Docker .................................................................. 24
+Conclusion ................................................................................... 25
+Chapter 2: Installing Docker ......................................................... 26
+Docker Editions ........................................................................... 27
+Installing Docker on Linux ........................................................... 28
+Installing Docker on macOS ........................................................ 32
+Installing Docker on Windows ...................................................... 33
+Post-Installation Steps ................................................................. 34
+Docker Desktop vs Docker Engine ............................................... 35
+Troubleshooting Common Installation Issues .............................. 36
+Updating Docker .......................................................................... 37
+
+Uninstalling Docker ..................................................................... 38
+Conclusion ................................................................................... 39
+Chapter 3: Working with Docker Containers ............................. 40
+Running Your First Container ....................................................... 41
+Basic Docker Commands ............................................................. 42
+Running Containers in Diﬀerent Modes ....................................... 44
+Port Mapping ............................................................................... 45
+Working with Container Logs ....................................................... 46
+Executing Commands in Running Containers .............................. 47
+Practical Example: Running an Apache Container ....................... 48
+Container Resource Management ............................................... 49
+Container Networking .................................................................. 50
+Data Persistence with Volumes ................................................... 51
+Container Health Checks ............................................................. 52
+Cleaning Up ................................................................................. 53
+Conclusion ................................................................................... 54
+Chapter 4: What are Docker Images ........................................... 55
+Key Concepts ............................................................................... 56
+Working with Docker Images ....................................................... 57
+Building Custom Images .............................................................. 59
+Image Tagging ............................................................................ 60
+Pushing Images to Docker Hub .................................................... 61
+Image Layers and Caching .......................................................... 62
+Multi-stage Builds ........................................................................ 63
+Image Scanning and Security ...................................................... 64
+Best Practices for Working with Images ...................................... 65
+Image Management and Cleanup ................................................ 66
+Conclusion ................................................................................... 67
+
+Chapter 5: What is a Dockerﬁle ................................................... 68
+Anatomy of a Dockerﬁle .............................................................. 69
+Dockerﬁle Instructions ................................................................. 70
+Best Practices for Writing Dockerﬁles .......................................... 74
+Advanced Dockerﬁle Concepts .................................................... 76
+Conclusion ................................................................................... 77
+Chapter 6: Docker Networking ..................................................... 78
+Docker Network Drivers .............................................................. 79
+Working with Docker Networks ................................................... 80
+Deep Dive into Network Drivers .................................................. 83
+Network Troubleshooting ............................................................ 86
+Best Practices .............................................................................. 87
+Advanced Topics ......................................................................... 88
+Conclusion ................................................................................... 89
+Chapter 7: Docker Volumes .......................................................... 90
+Why Use Docker Volumes? .......................................................... 91
+Types of Docker Volumes ............................................................ 92
+Working with Docker Volumes ..................................................... 94
+Volume Drivers ............................................................................ 96
+Best Practices for Using Docker Volumes .................................... 97
+Advanced Volume Concepts ........................................................ 98
+Troubleshooting Volume Issues ................................................. 100
+Conclusion ................................................................................. 101
+Chapter 8: Docker Compose ....................................................... 102
+Key Beneﬁts of Docker Compose .............................................. 103
+The docker-compose.yml File .................................................... 104
+
+Key Concepts in Docker Compose ............................................. 105
+Basic Docker Compose Commands ........................................... 106
+Advanced Docker Compose Features ........................................ 107
+Practical Examples .................................................................... 109
+Best Practices for Docker Compose ........................................... 115
+Scaling Services ........................................................................ 116
+Networking in Docker Compose ................................................ 117
+Volumes in Docker Compose ..................................................... 118
+Conclusion ................................................................................. 119
+Chapter 9: Docker Security Best Practices .............................. 120
+1. Keep Docker Updated ............................................................ 121
+2. Use Oﬃcial Images ................................................................ 122
+3. Scan Images for Vulnerabilities ............................................. 123
+4. Limit Container Resources ..................................................... 124
+5. Use Non-Root Users ............................................................... 125
+6. Use Secret Management ....................................................... 126
+7. Enable Content Trust ............................................................. 127
+8. Use Read-Only Containers ..................................................... 128
+9. Implement Network Segmentation ........................................ 129
+10. Regular Security Audits ....................................................... 130
+11. Use Security-Enhanced Linux (SELinux) or AppArmor ......... 131
+12. Implement Logging and Monitoring ..................................... 132
+Conclusion ................................................................................. 133
+Chapter 10: Docker in Production: Orchestration with
+Kubernetes .................................................................................... 134
+Key Kubernetes Concepts .......................................................... 135
+Setting Up a Kubernetes Cluster ............................................... 136
+Deploying a Docker Container to Kubernetes ............................ 137
+
+Scaling in Kubernetes ................................................................ 139
+Rolling Updates ......................................................................... 140
+Monitoring and Logging ............................................................. 141
+Kubernetes Dashboard .............................................................. 142
+Persistent Storage in Kubernetes .............................................. 143
+Kubernetes Networking ............................................................. 144
+Kubernetes Secrets ................................................................... 145
+Helm: The Kubernetes Package Manager .................................. 146
+Best Practices for Kubernetes in Production .............................. 147
+Conclusion ................................................................................. 148
+Chapter 11: Docker Performance Optimization ...................... 149
+1. Optimizing Docker Images .................................................... 150
+2. Container Resource Management ......................................... 152
+3. Networking Optimization ....................................................... 153
+4. Storage Optimization ............................................................. 154
+5. Logging and Monitoring ......................................................... 155
+6. Docker Daemon Optimization ................................................ 156
+7. Application-Level Optimization .............................................. 157
+8. Benchmarking and Proﬁling ................................................... 158
+9. Orchestration-Level Optimization .......................................... 159
+Conclusion ................................................................................. 160
+Chapter 12: Docker Troubleshooting and Debugging ............ 161
+1. Container Lifecycle Issues ..................................................... 162
+2. Networking Issues ................................................................. 163
+3. Storage and Volume Issues ................................................... 164
+4. Resource Constraints ............................................................ 165
+5. Image-related Issues ............................................................. 166
+6. Docker Daemon Issues .......................................................... 167
+
+7. Debugging Techniques .......................................................... 168
+8. Performance Debugging ........................................................ 169
+9. Docker Compose Troubleshooting ......................................... 170
+Conclusion ................................................................................. 171
+Chapter 13: Advanced Docker Concepts and Features .......... 172
+1. Multi-stage Builds .................................................................. 173
+2. Docker BuildKit ...................................................................... 174
+3. Custom Bridge Networks ....................................................... 175
+4. Docker Contexts .................................................................... 176
+5. Docker Content Trust (DCT) .................................................. 177
+6. Docker Secrets ...................................................................... 178
+7. Docker Health Checks ........................................................... 179
+8. Docker Plugins ....................................................................... 180
+9. Docker Experimental Features .............................................. 181
+10. Container Escape Protection ............................................... 182
+11. Custom Dockerﬁle Instructions ............................................ 183
+12. Docker Manifest .................................................................. 184
+13. Docker Buildx ...................................................................... 185
+14. Docker Compose Proﬁles ..................................................... 186
+Conclusion ................................................................................. 187
+Chapter 14: Docker in CI/CD Pipelines ...................................... 188
+1. Docker in Continuous Integration .......................................... 189
+2. Docker in Continuous Deployment ........................................ 190
+3. Docker Compose in CI/CD ...................................................... 192
+4. Security Scanning .................................................................. 193
+5. Performance Testing ............................................................. 194
+6. Environment-Speciﬁc Conﬁgurations ..................................... 195
+7. Caching in CI/CD .................................................................... 196
+
+8. Blue-Green Deployments with Docker ................................... 197
+9. Monitoring and Logging in CI/CD ........................................... 198
+Conclusion ................................................................................. 199
+Chapter 15: Docker and Microservices Architecture .............. 200
+1. Principles of Microservices .................................................... 201
+2. Dockerizing Microservices ..................................................... 202
+3. Inter-service Communication ................................................ 203
+4. Service Discovery .................................................................. 205
+5. API Gateway .......................................................................... 206
+6. Data Management ................................................................. 207
+7. Monitoring Microservices ....................................................... 208
+8. Scaling Microservices ............................................................ 209
+9. Testing Microservices ............................................................ 210
+10. Deployment Strategies ........................................................ 211
+Conclusion ................................................................................. 212
+Chapter 16: Docker for Data Science and Machine Learning ..
+213
+1. Setting Up a Data Science Environment ................................ 214
+2. Managing Dependencies with Docker ................................... 215
+3. GPU Support for Machine Learning ........................................ 216
+4. Distributed Training with Docker Swarm ............................... 217
+5. MLOps with Docker ................................................................ 218
+6. Data Pipeline with Apache Airﬂow ......................................... 219
+7. Reproducible Research with Docker ...................................... 220
+8. Big Data Processing with Docker ........................................... 221
+9. Automated Machine Learning (AutoML) with Docker ............. 222
+10. Hyperparameter Tuning at Scale ......................................... 223
+Conclusion ................................................................................. 224
+
+What is Docker Swarm mode ..................................................... 225
+Docker Services ......................................................................... 226
+Building a Swarm ...................................................................... 227
+Managing the cluster ................................................................... 230
+Promote a worker to manager ................................................... 232
+Using Services ........................................................................... 233
+Scaling a service ....................................................................... 235
+Deleting a service ...................................................................... 237
+Docker Swarm Knowledge Check .............................................. 238
+Conclusion ..................................................................................... 239
+Other eBooks ............................................................................. 240
+
+About the book
+
+This version was published on August 19 2024
+This is an introduction to Docker ebook that will help you learn the
+basics of Docker and how to start using containers for your SysOps,
+DevOps, and Dev projects. No matter if you are a DevOps/SysOps
+engineer, developer, or just a Linux enthusiast, you will most likely have
+to use Docker at some point in your career.
+The guide is suitable for anyone working as a developer, system
+administrator, or a DevOps engineer and wants to learn the basics of
+Docker.
+
+10
+
+About the author
+My name is Bobby Iliev, and I have been working as a Linux DevOps
+Engineer since 2014. I am an avid Linux lover and supporter of the
+open-source movement philosophy. I am always doing that which I
+cannot do in order that I may learn how to do it, and I believe in sharing
+knowledge.
+I think it's essential always to keep professional and surround yourself
+with good people, work hard, and be nice to everyone. You have to
+perform at a consistently higher level than others. That's the mark of a
+true professional.
+For more information, please visit my blog at https://bobbyiliev.com,
+follow me on Twitter @bobbyiliev_ and YouTube.
+
+11
+
+Sponsors
+This book is made possible thanks to these fantastic companies!
+
+Materialize
+The Streaming Database for Real-time Analytics.
+Materialize is a reactive database that delivers incremental view
+updates. Materialize helps developers easily build with streaming data
+using standard SQL.
+
+DigitalOcean
+DigitalOcean is a cloud services platform delivering the simplicity
+developers love and businesses trust to run production applications at
+scale.
+It provides highly available, secure, and scalable compute, storage, and
+networking solutions that help developers build great software faster.
+Founded in 2012 with oﬃces in New York and Cambridge, MA,
+DigitalOcean oﬀers transparent and aﬀordable pricing, an elegant user
+interface, and one of the largest libraries of open source resources
+available.
+For more information, please visit https://www.digitalocean.com or
+follow @digitalocean on Twitter.
+If you are new to DigitalOcean, you can get a free $100 credit and spin
+up your own servers via this referral link here:
+Free $200 Credit For DigitalOcean
+
+12
+
+DevDojo
+The DevDojo is a resource to learn all things web development and web
+design. Learn on your lunch break or wake up and enjoy a cup of coﬀee
+with us to learn something new.
+Join this developer community, and we can all learn together, build
+together, and grow together.
+Join DevDojo
+For more information, please visit https://www.devdojo.com or follow
+@thedevdojo on Twitter.
+
+13
+
+Ebook PDF Generation Tool
+This ebook was generated by Ibis developed by Mohamed Said.
+Ibis is a PHP tool that helps you write eBooks in markdown.
+
+14
+
+Book Cover
+The cover for this ebook was created with Canva.com.
+If you ever need to create a graphic, poster, invitation, logo,
+presentation – or anything that looks good — give Canva a go.
+
+15
+
+License
+MIT License
+Copyright (c) 2020 Bobby Iliev
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation ﬁles (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+16
+
+Chapter 1: Introduction to
+Docker
+
+17
+
+What is Docker?
+Docker is an open-source platform that automates the deployment,
+scaling, and management of applications using containerization
+technology. It allows developers to package applications and their
+dependencies into standardized units called containers, which can run
+consistently across diﬀerent environments.
+
+Key Concepts:
+1. Containerization: A lightweight form of virtualization that
+packages applications and their dependencies together.
+2. Docker Engine: The runtime that allows you to build and run
+containers.
+3. Docker Image: A read-only template used to create containers.
+4. Docker Container: A runnable instance of a Docker image.
+5. Docker Hub: A cloud-based registry for storing and sharing
+Docker images.
+
+18
+
+Why Use Docker?
+Docker oﬀers numerous advantages for developers and operations
+teams:
+1. Consistency: Ensures applications run the same way in
+development, testing, and production environments.
+2. Isolation: Containers are isolated from each other and the host
+system, improving security and reducing conﬂicts.
+3. Portability: Containers can run on any system that supports
+Docker, regardless of the underlying infrastructure.
+4. Eﬃciency: Containers share the host system's OS kernel, making
+them more lightweight than traditional virtual machines.
+5. Scalability: Easy to scale applications horizontally by running
+multiple containers.
+6. Version Control: Docker images can be versioned, allowing for
+easy rollbacks and updates.
+
+19
+
+Docker Architecture
+Docker uses a client-server architecture:
+1. Docker Client: The primary way users interact with Docker
+through the command line interface (CLI).
+2. Docker Host: The machine running the Docker daemon (dockerd).
+3. Docker Daemon: Manages Docker objects like images,
+containers, networks, and volumes.
+4. Docker Registry: Stores Docker images (e.g., Docker Hub).
+Here's a simpliﬁed diagram of the Docker architecture:
+┌─────────────┐
+┌─────────────────────────────────────┐
+│ Docker CLI │
+│
+Docker Host
+│
+│ (docker)
+│◄───►│ ┌────────────┐
+┌───────────┐ │
+└─────────────┘
+│ │
+Docker
+│
+│ Containers│ │
+│ │
+Daemon
+│◄────►│
+and
+│ │
+│ │ (dockerd) │
+│ Images
+│ │
+│ └────────────┘
+└───────────┘ │
+└─────────────────────────────────────┘
+▲
+│
+▼
+┌─────────────────────┐
+│
+Docker Registry
+│
+│
+(Docker Hub)
+│
+└─────────────────────┘
+
+20
+
+Containers vs. Virtual Machines
+While both containers and virtual machines (VMs) are used for isolating
+applications, they diﬀer in several key aspects:
+Aspect
+
+Containers
+
+Virtual Machines
+
+OS
+
+Share host OS kernel
+
+Run full OS and kernel
+
+Resource Usage
+
+Lightweight, minimal
+overhead
+
+Higher resource usage
+
+Boot Time
+
+Seconds
+
+Minutes
+
+Isolation
+
+Process-level isolation
+
+Full isolation
+
+Portability
+
+Highly portable across
+diﬀerent OSes
+
+Less portable, OSdependent
+
+Performance
+
+Near-native performance
+
+Slight performance
+overhead
+
+Storage
+
+Typically smaller (MBs)
+
+Larger (GBs)
+
+21
+
+Basic Docker Workflow
+1. Build: Create a Dockerﬁle that deﬁnes your application and its
+dependencies.
+2. Ship: Push your Docker image to a registry like Docker Hub.
+3. Run: Pull the image and run it as a container on any Dockerenabled host.
+Here's a simple example of this workﬂow:
+# Build an image
+docker build -t myapp:v1 .
+# Ship the image to Docker Hub
+docker push username/myapp:v1
+# Run the container
+docker run -d -p 8080:80 username/myapp:v1
+
+22
+
+Docker Components
+1. Dockerﬁle: A text ﬁle containing instructions to build a Docker
+image.
+2. Docker Compose: A tool for deﬁning and running multi-container
+Docker applications.
+3. Docker Swarm: Docker's native clustering and orchestration
+solution.
+4. Docker Network: Facilitates communication between Docker
+containers.
+5. Docker Volume: Provides persistent storage for container data.
+
+23
+
+Use Cases for Docker
+1. Microservices Architecture: Deploy and scale individual
+services independently.
+2. Continuous Integration/Continuous Deployment (CI/CD):
+Streamline development and deployment processes.
+3. Development Environments: Create consistent development
+environments across teams.
+4. Application Isolation: Run multiple versions of an application on
+the same host.
+5. Legacy Application Migration: Containerize legacy applications
+for easier management and deployment.
+
+24
+
+Conclusion
+Docker has revolutionized how applications are developed, shipped, and
+run. By providing a standardized way to package and deploy
+applications, Docker addresses many of the challenges faced in modern
+software development and operations. As we progress through this
+book, we'll dive deeper into each aspect of Docker, providing you with
+the knowledge and skills to leverage this powerful technology
+eﬀectively.
+
+25
+
+Chapter 2: Installing Docker
+
+Installing Docker is the ﬁrst step in your journey with containerization.
+This chapter will guide you through the process of installing Docker on
+various operating systems, troubleshooting common issues, and
+verifying your installation.
+
+26
+
+Docker Editions
+Before we begin, it's important to understand the diﬀerent Docker
+editions available:
+1. Docker Engine - Community: Free, open-source Docker platform
+suitable for developers and small teams.
+2. Docker Engine - Enterprise: Designed for enterprise
+development and IT teams building, running, and operating
+business-critical applications at scale.
+3. Docker Desktop: An easy-to-install application for Mac or
+Windows environments that includes Docker Engine, Docker CLI
+client, Docker Compose, Docker Content Trust, Kubernetes, and
+Credential Helper.
+For most users, Docker Engine - Community or Docker Desktop will be
+suﬃcient.
+
+27
+
+Installing Docker on Linux
+Docker runs natively on Linux, making it the ideal platform for Docker
+containers. There are two main methods to install Docker on Linux:
+using the convenience script or manual installation for speciﬁc
+distributions.
+
+Method 1: Using the Docker Installation Script
+(Recommended for Quick Setup)
+Docker provides a convenient script that automatically detects your
+Linux distribution and installs Docker for you. This method is quick and
+works across many Linux distributions:
+
+1. Run the following command to download and execute the Docker
+installation script:
+wget -qO- https://get.docker.com | sh
+
+2. Once the installation is complete, start the Docker service:
+sudo systemctl start docker
+
+3. Enable Docker to start on boot:
+sudo systemctl enable docker
+
+28
+
+This method is ideal for quick setups and testing environments.
+However, for production environments, you might want to consider the
+manual installation method for more control over the process.
+
+Method 2: Manual Installation for Speciﬁc Distributions
+For more control over the installation process or if you prefer to follow
+distribution-speciﬁc steps, you can manually install Docker. Here are
+instructions for popular Linux distributions:
+Docker runs natively on Linux, making it the ideal platform for Docker
+containers. Here's how to install Docker on popular Linux distributions:
+
+Ubuntu
+1. Update your package index:
+sudo apt-get update
+
+2. Install prerequisites:
+sudo apt-get install apt-transport-https ca-certificates
+curl software-properties-common
+
+3. Add Docker's oﬃcial GPG key:
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg |
+sudo apt-key add -
+
+29
+
+4. Set up the stable repository:
+sudo add-apt-repository "deb [arch=amd64]
+https://download.docker.com/linux/ubuntu $(lsb_release cs) stable"
+
+5. Update the package index again:
+sudo apt-get update
+
+6. Install Docker:
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+CentOS
+1. Install required packages:
+sudo yum install -y yum-utils device-mapper-persistentdata lvm2
+
+2. Add Docker repository:
+sudo yum-config-manager --add-repo
+https://download.docker.com/linux/centos/docker-ce.repo
+
+30
+
+3. Install Docker:
+sudo yum install docker-ce docker-ce-cli containerd.io
+
+4. Start and enable Docker:
+sudo systemctl start docker
+sudo systemctl enable docker
+
+Other Linux Distributions
+For other Linux distributions, refer to the oﬃcial Docker documentation:
+https://docs.docker.com/engine/install/
+
+31
+
+Installing Docker on macOS
+For macOS, the easiest way to install Docker is by using Docker
+Desktop:
+
+1. Download Docker Desktop for Mac from the oﬃcial Docker website:
+https://www.docker.com/products/docker-desktop
+
+2. Double-click the downloaded .dmg ﬁle and drag the Docker icon to
+your Applications folder.
+
+3. Open Docker from your Applications folder.
+
+4. Follow the on-screen instructions to complete the installation.
+
+32
+
+Installing Docker on Windows
+For Windows 10 Pro, Enterprise, or Education editions, you can install
+Docker Desktop:
+
+1. Download Docker Desktop for Windows from the oﬃcial Docker
+website: https://www.docker.com/products/docker-desktop
+
+2. Double-click the installer to run it.
+
+3. Follow the installation wizard to complete the installation.
+
+4. Once installed, Docker Desktop will start automatically.
+
+For Windows 10 Home or older versions of Windows, you can use
+Docker Toolbox, which uses Oracle VirtualBox to run Docker:
+
+1. Download Docker Toolbox from:
+https://github.com/docker/toolbox/releases
+
+2. Run the installer and follow the installation wizard.
+
+3. Once installed, use the Docker Quickstart Terminal to interact with
+Docker.
+
+33
+
+Post-Installation Steps
+After installing Docker, there are a few steps you should take:
+
+1. Verify the installation:
+docker version
+docker run hello-world
+
+2. Conﬁgure Docker to start on boot (Linux only):
+sudo systemctl enable docker
+
+3. Add your user to the docker group to run Docker commands
+without sudo (Linux only):
+sudo usermod -aG docker $USER
+
+Note: You'll need to log out and back in for this change to take
+eﬀect.
+
+34
+
+Docker Desktop vs Docker Engine
+It's important to understand the diﬀerence between Docker Desktop
+and Docker Engine:
+
+Docker Desktop is a user-friendly application that includes
+Docker Engine, Docker CLI client, Docker Compose, Docker
+Content Trust, Kubernetes, and Credential Helper. It's designed for
+easy installation and use on Mac and Windows.
+
+Docker Engine is the core Docker runtime available for Linux
+systems. It doesn't come with the additional tools included in
+Docker Desktop but can be installed alongside them separately.
+
+35
+
+Troubleshooting Common Installation Issues
+
+1. Permission denied: If you encounter "permission denied" errors,
+ensure you've added your user to the docker group or are using
+sudo.
+
+2. Docker daemon not running: On Linux, try starting the Docker
+service: sudo systemctl start docker
+
+3. Conﬂict with VirtualBox (Windows): Ensure Hyper-V is enabled
+for Docker Desktop, or use Docker Toolbox if you need to keep
+using VirtualBox.
+
+4. Insuﬃcient system resources: Docker Desktop requires at least
+4GB of RAM. Increase your system's or virtual machine's allocated
+RAM if needed.
+
+36
+
+Updating Docker
+To update Docker:
+On Linux, use your package manager (e.g., apt-get upgrade
+docker-ce on Ubuntu)
+On Mac and Windows, Docker Desktop will notify you of updates
+automatically
+
+37
+
+Uninstalling Docker
+If you need to uninstall Docker:
+On Linux, use your package manager (e.g., sudo apt-get purge
+docker-ce docker-ce-cli containerd.io on Ubuntu)
+On Mac, remove Docker Desktop from the Applications folder
+On Windows, uninstall Docker Desktop from the Control Panel
+
+38
+
+Conclusion
+Installing Docker is generally a straightforward process, but it can vary
+depending on your operating system. Always refer to the oﬃcial Docker
+documentation for the most up-to-date installation instructions for your
+speciﬁc system. With Docker successfully installed, you're now ready to
+start exploring the world of containerization!
+
+39
+
+Chapter 3: Working with
+Docker Containers
+
+Docker containers are lightweight, standalone, and executable
+packages that include everything needed to run a piece of software,
+including the code, runtime, system tools, libraries, and settings. In this
+chapter, we'll explore how to work with Docker containers eﬀectively.
+
+40
+
+Running Your First Container
+Let's start by running a simple container:
+docker run hello-world
+
+This command does the following:
+1. Checks for the hello-world image locally
+2. If not found, pulls the image from Docker Hub
+3. Creates a container from the image
+4. Runs the container, which prints a hello message
+5. Exits the container
+
+41
+
+Basic Docker Commands
+Here are some essential Docker commands for working with containers:
+
+Listing Containers
+To see all running containers:
+docker ps
+
+To see all containers (including stopped ones):
+docker ps -a
+
+Starting and Stopping Containers
+To stop a running container:
+docker stop <container_id_or_name>
+
+To start a stopped container:
+docker start <container_id_or_name>
+
+To restart a container:
+docker restart <container_id_or_name>
+
+42
+
+Removing Containers
+To remove a stopped container:
+docker rm <container_id_or_name>
+
+To force remove a running container:
+docker rm -f <container_id_or_name>
+
+43
+
+Running Containers in Different Modes
+
+Detached Mode
+Run a container in the background:
+docker run -d <image_name>
+
+Interactive Mode
+Run a container and interact with it:
+docker run -it <image_name> /bin/bash
+
+44
+
+Port Mapping
+To map a container's port to the host:
+docker run -p <host_port>:<container_port> <image_name>
+
+Example:
+docker run -d -p 80:80 nginx
+
+45
+
+Working with Container Logs
+View container logs:
+docker logs <container_id_or_name>
+
+Follow container logs in real-time:
+docker logs -f <container_id_or_name>
+
+46
+
+Executing Commands in Running Containers
+To execute a command in a running container:
+docker exec -it <container_id_or_name> <command>
+
+Example:
+docker exec -it my_container /bin/bash
+
+47
+
+Practical Example: Running an Apache Container
+Let's run an Apache web server container:
+
+1. Pull the image:
+docker pull httpd
+
+2. Run the container:
+docker run -d --name my-apache -p 8080:80 httpd
+
+3. Verify it's running:
+docker ps
+
+4. Access the default page by opening a web browser and navigating
+to http://localhost:8080
+
+5. Modify the default page:
+docker exec -it my-apache /bin/bash
+echo "<h1>Hello from my Apache container!</h1>" >
+/usr/local/apache2/htdocs/index.html
+exit
+
+6. Refresh your browser to see the changes
+
+48
+
+Container Resource Management
+
+Limiting Memory
+Run a container with a memory limit:
+docker run -d --memory=512m <image_name>
+
+Limiting CPU
+Run a container with CPU limit:
+docker run -d --cpus=0.5 <image_name>
+
+49
+
+Container Networking
+
+Listing Networks
+docker network ls
+
+Creating a Network
+docker network create my_network
+
+Connecting a Container to a Network
+docker run -d --network my_network --name my_container
+<image_name>
+
+50
+
+Data Persistence with Volumes
+
+Creating a Volume
+docker volume create my_volume
+
+Running a Container with a Volume
+docker run -d -v my_volume:/path/in/container <image_name>
+
+51
+
+Container Health Checks
+Docker provides built-in health checking capabilities. You can deﬁne a
+health check in your Dockerﬁle:
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s -retries=3 \
+CMD curl -f http://localhost/ || exit 1
+
+52
+
+Cleaning Up
+Remove all stopped containers:
+docker container prune
+
+Remove all unused resources (containers, networks, images):
+docker system prune
+
+53
+
+Conclusion
+Working with Docker containers involves a range of operations from
+basic running and stopping to more advanced topics like resource
+management and networking. As you become more comfortable with
+these operations, you'll be able to leverage Docker's full potential in
+your development and deployment workﬂows.
+Remember, containers are designed to be ephemeral. Always store
+important data in volumes or use appropriate persistence mechanisms
+for your applications.
+
+54
+
+Chapter 4: What are Docker
+Images
+
+A Docker image is a lightweight, standalone, and executable package
+that includes everything needed to run a piece of software, including
+the code, runtime, system tools, libraries, and settings. Images are the
+building blocks of Docker containers.
+
+55
+
+Key Concepts
+1. Layers: Images are composed of multiple layers, each
+representing a set of changes to the ﬁlesystem.
+2. Base Image: The foundation of an image, typically a minimal
+operating system.
+3. Parent Image: An image that your image is built upon.
+4. Image Tags: Labels used to version and identify images.
+5. Image ID: A unique identiﬁer for each image.
+
+56
+
+Working with Docker Images
+
+Listing Images
+To see all images on your local system:
+docker images
+
+Or use the more verbose command:
+docker image ls
+
+Pulling Images from Docker Hub
+To download an image from Docker Hub:
+docker pull <image_name>:<tag>
+
+Example:
+docker pull ubuntu:20.04
+
+If no tag is speciﬁed, Docker will pull the latest tag by default.
+
+Running Containers from Images
+To run a container from an image:
+
+57
+
+docker run <image_name>:<tag>
+
+Example:
+docker run -it ubuntu:20.04 /bin/bash
+
+Image Information
+To get detailed information about an image:
+docker inspect <image_name>:<tag>
+
+Removing Images
+To remove an image:
+docker rmi <image_name>:<tag>
+
+or
+docker image rm <image_name>:<tag>
+
+To remove all unused images:
+docker image prune
+
+58
+
+Building Custom Images
+
+Using a Dockerﬁle
+1. Create a ﬁle named Dockerfile with no extension.
+2. Deﬁne the instructions to build your image.
+Example Dockerﬁle:
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y nginx
+COPY ./my-nginx.conf /etc/nginx/nginx.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+3. Build the image:
+docker build -t my-nginx:v1 .
+
+Building from a Running Container
+1. Make changes to a running container.
+2. Create a new image from the container:
+docker commit <container_id> my-new-image:tag
+
+59
+
+Image Tagging
+To tag an existing image:
+docker tag <source_image>:<tag> <target_image>:<tag>
+
+Example:
+docker tag my-nginx:v1 my-dockerhub-username/my-nginx:v1
+
+60
+
+Pushing Images to Docker Hub
+1. Log in to Docker Hub:
+docker login
+
+2. Push the image:
+docker push my-dockerhub-username/my-nginx:v1
+
+61
+
+Image Layers and Caching
+Understanding layers is crucial for optimizing image builds:
+1. Each instruction in a Dockerﬁle creates a new layer.
+2. Layers are cached and reused in subsequent builds.
+3. Ordering instructions from least to most frequently changing can
+speed up builds.
+Example of leveraging caching:
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y nginx
+COPY ./static-files /var/www/html
+COPY ./config-files /etc/nginx
+
+62
+
+Multi-stage Builds
+Multi-stage builds allow you to use multiple FROM statements in your
+Dockerﬁle. This is useful for creating smaller production images.
+Example:
+# Build stage
+FROM golang:1.16 AS build
+WORKDIR /app
+COPY . .
+RUN go build -o myapp
+# Production stage
+FROM alpine:3.14
+COPY --from=build /app/myapp /usr/local/bin/myapp
+CMD ["myapp"]
+
+63
+
+Image Scanning and Security
+Docker provides built-in image scanning capabilities:
+docker scan <image_name>:<tag>
+
+This helps identify vulnerabilities in your images.
+
+64
+
+Best Practices for Working with Images
+1. Use speciﬁc tags instead of latest for reproducibility.
+2. Keep images small by using minimal base images and multi-stage
+builds.
+3. Use .dockerignore to exclude unnecessary ﬁles from the build
+context.
+4. Leverage build cache by ordering Dockerﬁle instructions
+eﬀectively.
+5. Regularly update base images to get security patches.
+6. Scan images for vulnerabilities before deployment.
+
+65
+
+Image Management and Cleanup
+To manage disk space, regularly clean up unused images:
+docker system prune -a
+
+This removes all unused images, not just dangling ones.
+
+66
+
+Conclusion
+Docker images are a fundamental concept in containerization. They
+provide a consistent and portable way to package applications and their
+dependencies. By mastering image creation, optimization, and
+management, you can signiﬁcantly improve your Docker workﬂows and
+application deployments.
+
+67
+
+Chapter 5: What is a
+Dockerfile
+
+A Dockerﬁle is a text document that contains a series of instructions
+and arguments. These instructions are used to create a Docker image
+automatically. It's essentially a script of successive commands Docker
+will run to assemble an image, automating the image creation process.
+
+68
+
+Anatomy of a Dockerfile
+A Dockerﬁle typically consists of the following components:
+1. Base image declaration
+2. Metadata and label information
+3. Environment setup
+4. File and directory operations
+5. Dependency installation
+6. Application code copying
+7. Execution command speciﬁcation
+Let's dive deep into each of these components and the instructions
+used to implement them.
+
+69
+
+Dockerfile Instructions
+
+FROM
+The FROM instruction initializes a new build stage and sets the base
+image for subsequent instructions.
+FROM ubuntu:20.04
+
+This instruction is typically the ﬁrst one in a Dockerﬁle. It's possible to
+have multiple FROM instructions in a single Dockerﬁle for multi-stage
+builds.
+
+LABEL
+LABEL adds metadata to an image in key-value pair format.
+
+LABEL version="1.0" maintainer="john@example.com"
+description="This is a sample Docker image"
+
+Labels are useful for image organization, licensing information,
+annotations, and other metadata.
+
+ENV
+ENV sets environment variables in the image.
+
+ENV APP_HOME=/app NODE_ENV=production
+
+These variables persist when a container is run from the resulting
+
+70
+
+image.
+
+WORKDIR
+WORKDIR sets the working directory for any subsequent RUN, CMD,
+ENTRYPOINT, COPY, and ADD instructions.
+
+WORKDIR /app
+
+If the directory doesn't exist, it will be created.
+
+COPY and ADD
+Both COPY and ADD instructions copy ﬁles from the host into the image.
+COPY package.json .
+ADD https://example.com/big.tar.xz /usr/src/things/
+
+COPY is generally preferred for its simplicity. ADD has some extra
+
+features like tar extraction and remote URL support, but these can
+make build behavior less predictable.
+
+RUN
+RUN executes commands in a new layer on top of the current image and
+
+commits the results.
+RUN apt-get update && apt-get install -y nodejs
+
+It's a best practice to chain commands with && and clean up in the same
+RUN instruction to keep layers small.
+
+71
+
+CMD
+CMD provides defaults for an executing container. There can only be one
+CMD instruction in a Dockerﬁle.
+
+CMD ["node", "app.js"]
+
+CMD can be overridden at runtime.
+
+ENTRYPOINT
+ENTRYPOINT conﬁgures a container that will run as an executable.
+
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+ENTRYPOINT is often used in combination with CMD, where ENTRYPOINT
+
+deﬁnes the executable and CMD supplies default arguments.
+
+EXPOSE
+EXPOSE informs Docker that the container listens on speciﬁed network
+
+ports at runtime.
+EXPOSE 80 443
+
+This doesn't actually publish the port; it functions as documentation
+between the person who builds the image and the person who runs the
+container.
+
+72
+
+VOLUME
+VOLUME creates a mount point and marks it as holding externally
+
+mounted volumes from native host or other containers.
+VOLUME /data
+
+This is useful for any mutable and/or user-serviceable parts of your
+image.
+
+ARG
+ARG deﬁnes a variable that users can pass at build-time to the builder
+
+with the docker build command.
+ARG VERSION=latest
+
+This allows for more ﬂexible image builds.
+
+73
+
+Best Practices for Writing Dockerfiles
+1. Use multi-stage builds: This helps create smaller ﬁnal images by
+separating build-time dependencies from runtime dependencies.
+FROM node:14 AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+
+2. Minimize the number of layers: Combine commands where
+possible to reduce the number of layers and image size.
+
+3. Leverage build cache: Order instructions from least to most
+frequently changing to maximize build cache usage.
+
+4. Use .dockerignore: Exclude ﬁles not relevant to the build, similar
+to .gitignore.
+
+5. Don't install unnecessary packages: Keep the image lean and
+secure by only installing what's needed.
+
+6. Use speciﬁc tags: Avoid latest tag for base images to ensure
+reproducible builds.
+
+7. Set the WORKDIR: Always use WORKDIR instead of proliferating
+
+74
+
+instructions like RUN cd … && do-something.
+
+8. Use COPY instead of ADD: Unless you explicitly need the extra
+functionality of ADD, use COPY for transparency.
+
+9. Use environment variables: Especially for version numbers and
+paths, making the Dockerﬁle more ﬂexible.
+
+75
+
+Advanced Dockerfile Concepts
+
+Health Checks
+You can use the HEALTHCHECK instruction to tell Docker how to test a
+container to check that it's still working.
+HEALTHCHECK --interval=30s --timeout=10s CMD curl -f
+http://localhost/ || exit 1
+
+Shell and Exec Forms
+Many Dockerﬁle instructions can be speciﬁed in shell form or exec form:
+Shell form: RUN apt-get install python3
+Exec form: RUN ["apt-get", "install", "python3"]
+The exec form is preferred as it's more explicit and avoids issues with
+shell string munging.
+
+BuildKit
+BuildKit is a new backend for Docker builds that oﬀers better
+performance, storage management, and features. You can enable it by
+setting an environment variable:
+export DOCKER_BUILDKIT=1
+
+76
+
+Conclusion
+Dockerﬁles are a powerful tool for creating reproducible, versioncontrolled Docker images. By mastering Dockerﬁle instructions and best
+practices, you can create eﬃcient, secure, and portable applications.
+Remember that writing good Dockerﬁles is an iterative process –
+continually reﬁne your Dockerﬁles as you learn more about your
+application's needs and Docker's capabilities.
+
+77
+
+Chapter 6: Docker Networking
+
+Docker networking allows containers to communicate with each other
+and with the outside world. It's a crucial aspect of Docker that enables
+the creation of complex, multi-container applications and microservices
+architectures.
+
+78
+
+Docker Network Drivers
+Docker uses a pluggable architecture for networking, oﬀering several
+built-in network drivers:
+1. Bridge: The default network driver. It's suitable for standalone
+containers that need to communicate.
+2. Host: Removes network isolation between the container and the
+Docker host.
+3. Overlay: Enables communication between containers across
+multiple Docker daemon hosts.
+4. MacVLAN: Assigns a MAC address to a container, making it
+appear as a physical device on the network.
+5. None: Disables all networking for a container.
+6. Network plugins: Allow you to use third-party network drivers.
+
+79
+
+Working with Docker Networks
+
+Listing Networks
+To list all networks:
+docker network ls
+
+This command shows the network ID, name, driver, and scope for each
+network.
+
+Inspecting Networks
+To get detailed information about a network:
+docker network inspect <network_name>
+
+This provides information such as the network's subnet, gateway,
+connected containers, and conﬁguration options.
+
+Creating a Network
+To create a new network:
+docker network create --driver <driver> <network_name>
+
+Example:
+
+80
+
+docker network create --driver bridge my_custom_network
+
+You can specify additional options like subnet, gateway, IP range, etc.:
+docker network create --driver bridge --subnet 172.18.0.0/16 -gateway 172.18.0.1 my_custom_network
+
+Connecting Containers to Networks
+When running a container, you can specify which network it should
+connect to:
+docker run --network <network_name> <image>
+
+Example:
+docker run --network my_custom_network --name container1 -d
+nginx
+
+You can also connect a running container to a network:
+docker network connect <network_name> <container_name>
+
+Disconnecting Containers from Networks
+To disconnect a container from a network:
+docker network disconnect <network_name> <container_name>
+
+81
+
+Removing Networks
+To remove a network:
+docker network rm <network_name>
+
+82
+
+Deep Dive into Network Drivers
+
+Bridge Networks
+Bridge networks are the most commonly used network type in Docker.
+They are suitable for containers running on the same Docker daemon
+host.
+Key points about bridge networks:
+Each container connected to a bridge network is allocated a unique
+IP address.
+Containers on the same bridge network can communicate with
+each other using IP addresses.
+The default bridge network has some limitations, so it's often
+better to create custom bridge networks.
+Example of creating and using a custom bridge network:
+docker network create my_bridge
+docker run --network my_bridge --name container1 -d nginx
+docker run --network my_bridge --name container2 -d nginx
+
+Now container1 and container2 can communicate with each other
+using their container names as hostnames.
+
+Host Networks
+Host networking adds a container on the host's network stack. This
+oﬀers the best networking performance but sacriﬁces network isolation.
+Example:
+
+83
+
+docker run --network host -d nginx
+
+In this case, if the container exposes port 80, it will be accessible on
+port 80 of the host machine directly.
+
+Overlay Networks
+Overlay networks are used in Docker Swarm mode to enable
+communication between containers across multiple Docker daemon
+hosts.
+To create an overlay network:
+docker network create --driver overlay my_overlay
+
+Then, when creating a service in swarm mode, you can attach it to this
+network:
+docker service create --network my_overlay --name my_service
+nginx
+
+MacVLAN Networks
+MacVLAN networks allow you to assign a MAC address to a container,
+making it appear as a physical device on your network.
+Example:
+
+84
+
+docker network create -d macvlan \
+--subnet=192.168.0.0/24 \
+--gateway=192.168.0.1 \
+-o parent=eth0 my_macvlan_net
+
+Then run a container on this network:
+docker run --network my_macvlan_net -d nginx
+
+85
+
+Network Troubleshooting
+
+1. Container-to-Container Communication: Use the docker exec
+command to get into a container and use tools like ping, curl, or
+wget to test connectivity.
+
+2. Network Inspection: Use docker network inspect to view
+detailed information about a network.
+
+3. Port Mapping: Use docker port <container> to see the port
+mappings for a container.
+
+4. DNS Issues: Check the /etc/resolv.conf ﬁle inside the
+container to verify DNS settings.
+
+5. Network Namespace: For advanced troubleshooting, you can
+enter the network namespace of a container:
+pid=$(docker inspect -f '{{.State.Pid}}' <container_name>)
+nsenter -t $pid -n ip addr
+
+86
+
+Best Practices
+1. Use custom bridge networks instead of the default bridge network
+for better isolation and built-in DNS resolution.
+2. Use overlay networks for multi-host communication in swarm
+mode.
+3. Use host networking sparingly and only when high performance is
+required.
+4. Be cautious with exposing ports, only expose what's necessary.
+5. Use Docker Compose for managing multi-container applications
+and their networks.
+
+87
+
+Advanced Topics
+
+Network Encryption
+For overlay networks, you can enable encryption to secure container-tocontainer traﬃc:
+docker network create --opt encrypted --driver overlay
+my_secure_network
+
+Network Plugins
+Docker supports third-party network plugins. Popular options include
+Weave Net, Calico, and Flannel. These can provide additional features
+like advanced routing, network policies, and encryption.
+
+Service Discovery
+Docker provides built-in service discovery for containers on the same
+network. Containers can reach each other using container names as
+hostnames. In swarm mode, there's also built-in load balancing for
+services.
+
+88
+
+Conclusion
+Networking is a critical component of Docker that enables complex,
+distributed applications. By understanding and eﬀectively using
+Docker's networking capabilities, you can create secure, eﬃcient, and
+scalable containerized applications. Always consider your speciﬁc use
+case when choosing network drivers and conﬁgurations.
+
+89
+
+Chapter 7: Docker Volumes
+
+Docker volumes are the preferred mechanism for persisting data
+generated by and used by Docker containers. While containers can
+create, update, and delete ﬁles, those changes are lost when the
+container is removed and all changes are isolated to that container.
+Volumes provide the ability to connect speciﬁc ﬁlesystem paths of the
+container back to the host machine. If a directory in the container is
+mounted, changes in that directory are also seen on the host machine.
+If we mount that same directory across container restarts, we'd see the
+same ﬁles.
+
+90
+
+Why Use Docker Volumes?
+1. Data Persistence: Volumes allow you to persist data even when
+containers are stopped or removed.
+2. Data Sharing: Volumes can be shared and reused among multiple
+containers.
+3. Performance: Volumes are stored on the host ﬁlesystem, which
+generally provides better I/O performance, especially for
+databases.
+4. Data Management: Volumes make it easier to backup, restore,
+and migrate data.
+5. Decoupling: Volumes decouple the conﬁguration of the Docker
+host from the container runtime.
+
+91
+
+Types of Docker Volumes
+
+1. Named Volumes
+Named volumes are the recommended way to persist data in Docker.
+They are explicitly created and given a name.
+Creating a named volume:
+docker volume create my_volume
+
+Using a named volume:
+docker run -d --name devtest -v my_volume:/app nginx:latest
+
+2. Anonymous Volumes
+Anonymous volumes are automatically created by Docker and given a
+random name. They're useful for temporary data that you don't need to
+persist beyond the life of the container.
+Using an anonymous volume:
+docker run -d --name devtest -v /app nginx:latest
+
+3. Bind Mounts
+Bind mounts map a speciﬁc path of the host machine to a path in the
+container. They're useful for development environments.
+
+92
+
+Using a bind mount:
+docker run -d --name devtest -v /path/on/host:/app
+nginx:latest
+
+93
+
+Working with Docker Volumes
+
+Listing Volumes
+To list all volumes:
+docker volume ls
+
+Inspecting Volumes
+To get detailed information about a volume:
+docker volume inspect my_volume
+
+Removing Volumes
+To remove a speciﬁc volume:
+docker volume rm my_volume
+
+To remove all unused volumes:
+docker volume prune
+
+Backing Up Volumes
+To backup a volume:
+
+94
+
+docker run --rm -v my_volume:/source -v /path/on/host:/backup
+ubuntu tar cvf /backup/backup.tar /source
+
+Restoring Volumes
+To restore a volume from a backup:
+docker run --rm -v my_volume:/target -v /path/on/host:/backup
+ubuntu tar xvf /backup/backup.tar -C /target --strip 1
+
+95
+
+Volume Drivers
+Docker supports volume drivers, which allow you to store volumes on
+remote hosts or cloud providers, among other options.
+Some popular volume drivers include:
+Local (default)
+NFS
+AWS EBS
+Azure File Storage
+To use a speciﬁc volume driver:
+docker volume create --driver <driver_name> my_volume
+
+96
+
+Best Practices for Using Docker Volumes
+
+1. Use named volumes: They're easier to manage and track than
+anonymous volumes.
+
+2. Don't use bind mounts in production: They're less portable
+and can pose security risks.
+
+3. Use volumes for databases: Databases require persistent
+storage and beneﬁt from the performance of volumes.
+
+4. Be cautious with permissions: Ensure the processes in your
+containers have the necessary permissions to read/write to
+volumes.
+
+5. Clean up unused volumes: Regularly use docker volume prune
+to remove unused volumes and free up space.
+
+6. Use volume labels: Labels can help you organize and manage
+your volumes.
+docker volume create --label project=myapp my_volume
+
+7. Consider using Docker Compose: Docker Compose makes it
+easier to manage volumes across multiple containers.
+
+97
+
+Advanced Volume Concepts
+
+1. Read-Only Volumes
+You can mount volumes as read-only to prevent containers from
+modifying the data:
+docker run -d --name devtest -v my_volume:/app:ro nginx:latest
+
+2. Tmpfs Mounts
+Tmpfs mounts are stored in the host system's memory only, which can
+be useful for storing sensitive information:
+docker run -d --name tmptest --tmpfs /app nginx:latest
+
+3. Sharing Volumes Between Containers
+You can share a volume between multiple containers:
+docker run -d --name container1 -v my_volume:/app nginx:latest
+docker run -d --name container2 -v my_volume:/app nginx:latest
+
+4. Volume Plugins
+Docker supports third-party volume plugins that can provide additional
+functionality:
+
+98
+
+docker plugin install <plugin_name>
+docker volume create -d <plugin_name> my_volume
+
+99
+
+Troubleshooting Volume Issues
+
+1. Volume not persisting data: Ensure you're using the correct
+volume name and mount path.
+
+2. Permission issues: Check the permissions of the mounted
+directory both on the host and in the container.
+
+3. Volume not removing: Make sure no containers are using the
+volume before trying to remove it.
+
+4. Performance issues: If you're experiencing slow I/O, consider
+using a volume driver optimized for your use case.
+
+100
+
+Conclusion
+Docker volumes are a crucial component for managing data in Docker
+environments. They provide a ﬂexible and eﬃcient way to persist and
+share data between containers and the host system. By understanding
+how to create, manage, and use volumes eﬀectively, you can build
+more robust and maintainable containerized applications.
+Remember that the choice between diﬀerent types of volumes (named
+volumes, bind mounts, or tmpfs mounts) depends on your speciﬁc use
+case. Always consider factors like persistence needs, performance
+requirements, and security implications when working with Docker
+volumes.
+
+101
+
+Chapter 8: Docker Compose
+
+Docker Compose is a powerful tool for deﬁning and running multicontainer Docker applications. With Compose, you use a YAML ﬁle to
+conﬁgure your application's services, networks, and volumes. Then,
+with a single command, you create and start all the services from your
+conﬁguration.
+Note: Docker Compose is now integrated into Docker CLI. The new
+command is docker compose instead of docker-compose. We'll use the
+new command throughout this chapter.
+
+102
+
+Key Benefits of Docker Compose
+1. Simplicity: Deﬁne your entire application stack in a single ﬁle.
+2. Reproducibility: Easily share and version control your application
+conﬁguration.
+3. Scalability: Simple commands to scale services up or down.
+4. Environment Consistency: Ensure development, staging, and
+production environments are identical.
+5. Workﬂow Improvement: Compose can be used throughout the
+development cycle for testing, staging, and production.
+
+103
+
+The docker-compose.yml File
+The docker-compose.yml ﬁle is the core of Docker Compose. It deﬁnes
+all the components and conﬁgurations of your application. Here's a
+basic example:
+version: '3.8'
+services:
+web:
+build: .
+ports:
+- "5000:5000"
+volumes:
+- .:/code
+environment:
+FLASK_ENV: development
+redis:
+image: "redis:alpine"
+
+Let's break down this example:
+version: Speciﬁes the Compose ﬁle format version.
+services: Deﬁnes the containers that make up your app.
+web: A service based on an image built from the Dockerﬁle in the
+
+current directory.
+redis: A service using the public Redis image.
+
+104
+
+Key Concepts in Docker Compose
+1. Services: Containers that make up your application.
+2. Networks: How your services communicate with each other.
+3. Volumes: Where your services store and access data.
+
+105
+
+Basic Docker Compose Commands
+
+docker compose up: Create and start containers
+
+docker compose up -d
+
+# Run in detached mode
+
+docker compose down: Stop and remove containers, networks,
+
+images, and volumes
+docker compose down --volumes
+
+# Also remove volumes
+
+docker compose ps: List containers
+
+docker compose logs: View output from containers
+
+docker compose logs -f web
+service
+
+106
+
+# Follow logs for the web
+
+Advanced Docker Compose Features
+
+1. Environment Variables
+You can use .env ﬁles or set them directly in the compose ﬁle:
+version: '3.8'
+services:
+web:
+image: "webapp:${TAG}"
+environment:
+- DEBUG=1
+
+2. Extending Services
+Use extends to share common conﬁgurations:
+version: '3.8'
+services:
+web:
+extends:
+file: common-services.yml
+service: webapp
+
+3. Healthchecks
+Ensure services are ready before starting dependent services:
+
+107
+
+version: '3.8'
+services:
+web:
+image: "webapp:latest"
+healthcheck:
+test: ["CMD", "curl", "-f", "http://localhost"]
+interval: 1m30s
+timeout: 10s
+retries: 3
+start_period: 40s
+
+108
+
+Practical Examples
+
+Example 1: WordPress with MySQL
+version: '3.8'
+services:
+db:
+image: mysql:5.7
+volumes:
+- db_data:/var/lib/mysql
+restart: always
+environment:
+MYSQL_ROOT_PASSWORD: somewordpress
+MYSQL_DATABASE: wordpress
+MYSQL_USER: wordpress
+MYSQL_PASSWORD: wordpress
+wordpress:
+depends_on:
+- db
+image: wordpress:latest
+ports:
+- "8000:80"
+restart: always
+environment:
+WORDPRESS_DB_HOST: db:3306
+WORDPRESS_DB_USER: wordpress
+WORDPRESS_DB_PASSWORD: wordpress
+WORDPRESS_DB_NAME: wordpress
+volumes:
+db_data: {}
+
+Let's break this down in detail:
+
+1. Version: version: '3.8' speciﬁes the version of the Compose
+ﬁle format. Version 3.8 is compatible with Docker Engine 19.03.0+.
+
+109
+
+2. Services: We deﬁne two services: db and wordpress.
+a. db service:
+image: mysql:5.7: Uses the oﬃcial MySQL 5.7 image.
+volumes: Creates a named volume db_data and mounts it to
+/var/lib/mysql in the container. This ensures that the
+
+database data persists even if the container is removed.
+restart: always: Ensures that the container always restarts
+if it stops.
+environment: Sets up the MySQL environment variables:
+MYSQL_ROOT_PASSWORD: Sets the root password for
+
+MySQL.
+MYSQL_DATABASE: Creates a database named
+
+"wordpress".
+MYSQL_USER and MYSQL_PASSWORD: Creates a new user
+with the speciﬁed password.
+b. wordpress service:
+depends_on: Ensures that the db service is started before the
+wordpress service.
+image: wordpress:latest: Uses the latest oﬃcial WordPress
+
+image.
+ports: Maps port 8000 on the host to port 80 in the container,
+where WordPress runs.
+restart: always: Ensures the container always restarts if it
+stops.
+environment: Sets up WordPress environment variables:
+WORDPRESS_DB_HOST: Speciﬁes the database host. Note
+the use of db:3306, where db is the service name of our
+MySQL container.
+WORDPRESS_DB_USER, WORDPRESS_DB_PASSWORD,
+WORDPRESS_DB_NAME: These match the MySQL settings
+we deﬁned in the db service.
+
+110
+
+3. Volumes: db_data: {}: This creates a named volume that Docker
+manages. It's used to persist the MySQL data.
+
+To run this setup:
+1. Save the above YAML in a ﬁle named docker-compose.yml.
+2. In the same directory, run docker compose up -d.
+3. Once the containers are running, you can access WordPress by
+navigating to http://localhost:8000 in your web browser.
+This setup provides a complete WordPress environment with a MySQL
+database, all conﬁgured and ready to use. The use of environment
+variables and volumes ensures that the setup is both ﬂexible and
+persistent.
+
+Example 2: Flask App with Redis and Nginx
+
+111
+
+version: '3.8'
+services:
+flask:
+build: ./flask
+environment:
+- FLASK_ENV=development
+volumes:
+- ./flask:/code
+redis:
+image: "redis:alpine"
+nginx:
+image: "nginx:alpine"
+volumes:
+- ./nginx.conf:/etc/nginx/nginx.conf:ro
+ports:
+- "80:80"
+depends_on:
+- flask
+networks:
+frontend:
+backend:
+volumes:
+db-data:
+
+Let's break this down:
+
+1. Version: As before, we're using version 3.8 of the Compose ﬁle
+format.
+
+2. Services: We deﬁne three services: flask, redis, and nginx.
+a. ﬂask service:
+build: ./flask: This tells Docker to build an image using the
+
+Dockerﬁle in the ./flask directory.
+
+112
+
+environment: Sets FLASK_ENV=development, which enables
+
+debug mode in Flask.
+volumes: Mounts the local ./flask directory to /code in the
+container. This is useful for development as it allows you to
+make changes to your code without rebuilding the container.
+b. redis service:
+image: "redis:alpine": Uses the oﬃcial Redis image based
+
+on Alpine Linux, which is lightweight.
+c. nginx service:
+image: "nginx:alpine": Uses the oﬃcial Nginx image based
+
+on Alpine Linux.
+volumes: Mounts a local nginx.conf ﬁle to
+/etc/nginx/nginx.conf in the container. The :ro ﬂag makes
+
+it read-only.
+ports: Maps port 80 on the host to port 80 in the container.
+depends_on: Ensures that the flask service is started before
+
+Nginx.
+3. Networks: We deﬁne two networks: frontend and backend. This
+allows us to isolate our services. For example, we could put Nginx
+and Flask on the frontend network, and Flask and Redis on the
+backend network.
+
+4. Volumes: db-data: This creates a named volume. Although it's
+not used in this conﬁguration, it's available if we need persistent
+storage, perhaps for a database service we might add later.
+
+To use this setup:
+1. You need a Flask application in a directory named flask, with a
+
+113
+
+Dockerﬁle to build it.
+2. You need an nginx.conf ﬁle in the same directory as your dockercompose.yml.
+3. Run docker compose up -d to start the services.
+This conﬁguration sets up a Flask application server, with Redis
+available for caching or as a message broker, and Nginx as a reverse
+proxy. The Flask code is mounted as a volume, allowing for easy
+development. Nginx handles incoming requests and forwards them to
+the Flask application.
+The use of Alpine-based images for Redis and Nginx helps to keep the
+overall image size small, which is beneﬁcial for deployment and scaling.
+This setup is particularly useful for developing and testing a Flask
+application in an environment that closely mimics production, with a
+proper web server (Nginx) in front of the application server (Flask) and
+a caching/messaging system (Redis) available.
+
+114
+
+Best Practices for Docker Compose
+1. Use version control for your docker-compose.yml ﬁle.
+2. Keep development, staging, and production environments as
+similar as possible.
+3. Use build arguments and environment variables for ﬂexibility.
+4. Leverage healthchecks to ensure service dependencies are met.
+5. Use .env ﬁles for environment-speciﬁc variables.
+6. Optimize your images to keep them small and eﬃcient.
+7. Use docker-compose.override.yml for local development settings.
+
+115
+
+Scaling Services
+Docker Compose can scale services with a single command:
+docker compose up -d --scale web=3
+
+This command would start 3 instances of the web service.
+
+116
+
+Networking in Docker Compose
+By default, Compose sets up a single network for your app. Each
+container for a service joins the default network and is both reachable
+by other containers on that network, and discoverable by them at a
+hostname identical to the container name.
+You can also specify custom networks:
+version: '3.8'
+services:
+web:
+networks:
+- frontend
+- backend
+db:
+networks:
+- backend
+networks:
+frontend:
+backend:
+
+117
+
+Volumes in Docker Compose
+Compose also lets you create named volumes that can be reused
+across multiple services:
+version: '3.8'
+services:
+db:
+image: postgres
+volumes:
+- data:/var/lib/postgresql/data
+volumes:
+data:
+
+118
+
+Conclusion
+Docker Compose simpliﬁes the process of managing multi-container
+applications, making it an essential tool for developers working with
+Docker. By mastering Docker Compose, you can streamline your
+development workﬂow, ensure consistency across diﬀerent
+environments, and easily manage complex applications with multiple
+interconnected services.
+Remember to always use the latest docker compose command instead
+of the older docker-compose, as it's now integrated directly into Docker
+CLI and oﬀers improved functionality and performance.
+
+119
+
+Chapter 9: Docker Security
+Best Practices
+
+Security is a critical aspect of working with Docker, especially in
+production environments. This chapter will cover essential security
+practices to help you build and maintain secure Docker environments.
+
+120
+
+1. Keep Docker Updated
+Always use the latest version of Docker to beneﬁt from the most recent
+security patches.
+sudo apt-get update
+sudo apt-get upgrade docker-ce
+
+121
+
+2. Use Official Images
+Whenever possible, use oﬃcial images from Docker Hub or trusted
+sources. These images are regularly updated and scanned for
+vulnerabilities.
+version: '3.8'
+services:
+web:
+image: nginx:latest
+
+# Official Nginx image
+
+122
+
+3. Scan Images for Vulnerabilities
+Use tools like Docker Scout or Trivy to scan your images for known
+vulnerabilities.
+docker scout cve <image_name>
+
+123
+
+4. Limit Container Resources
+Prevent Denial of Service attacks by limiting container resources:
+version: '3.8'
+services:
+web:
+image: nginx:latest
+deploy:
+resources:
+limits:
+cpus: '0.50'
+memory: 50M
+
+124
+
+5. Use Non-Root Users
+Run containers as non-root users to limit the potential impact of a
+container breach:
+FROM node:14
+RUN groupadd -r myapp && useradd -r -g myapp myuser
+USER myuser
+
+125
+
+6. Use Secret Management
+For sensitive data like passwords and API keys, use Docker secrets:
+echo "mysecretpassword" | docker secret create db_password -
+
+Then in your docker-compose.yml:
+version: '3.8'
+services:
+db:
+image: mysql
+secrets:
+- db_password
+secrets:
+db_password:
+external: true
+
+126
+
+7. Enable Content Trust
+Sign and verify image tags:
+export DOCKER_CONTENT_TRUST=1
+docker push myrepo/myimage:latest
+
+127
+
+8. Use Read-Only Containers
+When possible, run containers in read-only mode:
+version: '3.8'
+services:
+web:
+image: nginx
+read_only: true
+tmpfs:
+- /tmp
+- /var/cache/nginx
+
+128
+
+9. Implement Network Segmentation
+Use Docker networks to isolate containers:
+version: '3.8'
+services:
+frontend:
+networks:
+- frontend
+backend:
+networks:
+- backend
+networks:
+frontend:
+backend:
+
+129
+
+10. Regular Security Audits
+Regularly audit your Docker environment using tools like Docker Bench
+for Security:
+docker run -it --net host --pid host --userns host --cap-add
+audit_control \
+-e DOCKER_CONTENT_TRUST=$DOCKER_CONTENT_TRUST \
+-v /var/lib:/var/lib \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v /usr/lib/systemd:/usr/lib/systemd \
+-v /etc:/etc --label docker_bench_security \
+docker/docker-bench-security
+
+130
+
+11. Use Security-Enhanced Linux (SELinux) or
+AppArmor
+These provide an additional layer of security. Ensure they're enabled
+and properly conﬁgured on your host system.
+
+131
+
+12. Implement Logging and Monitoring
+Use Docker's logging capabilities and consider integrating with external
+monitoring tools:
+version: '3.8'
+services:
+web:
+image: nginx
+logging:
+driver: "json-file"
+options:
+max-size: "200k"
+max-file: "10"
+
+132
+
+Conclusion
+Implementing these security best practices will signiﬁcantly improve
+the security posture of your Docker environments. Remember, security
+is an ongoing process, and it's important to stay informed about the
+latest security threats and Docker security features.
+
+133
+
+Chapter 10: Docker in
+Production: Orchestration
+with Kubernetes
+
+Kubernetes (K8s) is an open-source container orchestration platform
+that automates the deployment, scaling, and management of
+containerized applications. It works well with Docker and provides a
+robust set of features for running containers in production.
+Kubernetes is a topic of its own, but here are some key concepts and
+best practices for using Kubernetes with Docker in production
+environments.
+
+134
+
+Key Kubernetes Concepts
+1. Pods: The smallest deployable units in Kubernetes, containing one
+or more containers.
+2. Services: An abstract way to expose an application running on a
+set of Pods.
+3. Deployments: Describe the desired state for Pods and
+ReplicaSets.
+4. Namespaces: Virtual clusters within a physical cluster.
+
+135
+
+Setting Up a Kubernetes Cluster
+You can set up a local Kubernetes cluster using Minikube:
+minikube start
+
+For production, consider managed Kubernetes services like Google
+Kubernetes Engine (GKE), Amazon EKS, or Azure AKS.
+
+136
+
+Deploying a Docker Container to Kubernetes
+1. Create a Deployment YAML ﬁle (deployment.yaml):
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: nginx-deployment
+spec:
+replicas: 3
+selector:
+matchLabels:
+app: nginx
+template:
+metadata:
+labels:
+app: nginx
+spec:
+containers:
+- name: nginx
+image: nginx:1.14.2
+ports:
+- containerPort: 80
+
+2. Apply the Deployment:
+kubectl apply -f deployment.yaml
+
+3. Create a Service to expose the Deployment (service.yaml):
+
+137
+
+apiVersion: v1
+kind: Service
+metadata:
+name: nginx-service
+spec:
+selector:
+app: nginx
+ports:
+- protocol: TCP
+port: 80
+targetPort: 80
+type: LoadBalancer
+
+4. Apply the Service:
+kubectl apply -f service.yaml
+
+138
+
+Scaling in Kubernetes
+Scale your deployment easily:
+kubectl scale deployment nginx-deployment --replicas=5
+
+139
+
+Rolling Updates
+Update your application without downtime:
+kubectl set image deployment/nginx-deployment
+nginx=nginx:1.16.1
+
+140
+
+Monitoring and Logging
+1. View Pod logs:
+kubectl logs <pod-name>
+
+2. Use Prometheus and Grafana for monitoring:
+helm install prometheus stable/prometheus
+helm install grafana stable/grafana
+
+141
+
+Kubernetes Dashboard
+Enable the Kubernetes Dashboard for a GUI:
+minikube addons enable dashboard
+minikube dashboard
+
+142
+
+Persistent Storage in Kubernetes
+Use Persistent Volumes (PV) and Persistent Volume Claims (PVC):
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+name: mysql-pv-claim
+spec:
+accessModes:
+- ReadWriteOnce
+resources:
+requests:
+storage: 1Gi
+
+143
+
+Kubernetes Networking
+1. ClusterIP: Exposes the Service on a cluster-internal IP.
+2. NodePort: Exposes the Service on each Node's IP at a static port.
+3. LoadBalancer: Exposes the Service externally using a cloud
+provider's load balancer.
+
+144
+
+Kubernetes Secrets
+Manage sensitive information:
+kubectl create secret generic my-secret --fromliteral=password=mysecretpassword
+
+Use in a Pod:
+spec:
+containers:
+- name: myapp
+image: myapp
+env:
+- name: SECRET_PASSWORD
+valueFrom:
+secretKeyRef:
+name: my-secret
+key: password
+
+145
+
+Helm: The Kubernetes Package Manager
+Helm simpliﬁes deploying complex applications:
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install my-release bitnami/wordpress
+
+146
+
+Best Practices for Kubernetes in Production
+1. Use namespaces to organize resources.
+2. Implement resource requests and limits.
+3. Use liveness and readiness probes.
+4. Implement proper logging and monitoring.
+5. Regularly update Kubernetes and your applications.
+6. Use Network Policies for ﬁne-grained network control.
+7. Implement proper RBAC (Role-Based Access Control).
+
+147
+
+Conclusion
+Kubernetes provides a powerful platform for orchestrating Docker
+containers in production environments. It oﬀers robust features for
+scaling, updating, and managing containerized applications. While
+there's a learning curve, the beneﬁts of using Kubernetes for production
+Docker deployments are signiﬁcant, especially for large, complex
+applications.
+
+148
+
+Chapter 11: Docker
+Performance Optimization
+
+Optimizing Docker performance is crucial for eﬃcient resource
+utilization and improved application responsiveness. This chapter
+covers various techniques and best practices to enhance the
+performance of your Docker containers and overall Docker
+environment.
+
+149
+
+1. Optimizing Docker Images
+
+Use Multi-Stage Builds
+Multi-stage builds can signiﬁcantly reduce the size of your ﬁnal Docker
+image:
+# Build stage
+FROM golang:1.16 AS builder
+WORKDIR /app
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o
+main .
+# Final stage
+FROM alpine:latest
+RUN apk --no-cache add ca-certificates
+WORKDIR /root/
+COPY --from=builder /app/main .
+CMD ["./main"]
+
+Minimize Layer Count
+Combine commands to reduce the number of layers:
+RUN apt-get update && apt-get install -y \
+package1 \
+package2 \
+package3 \
+&& rm -rf /var/lib/apt/lists/*
+
+Use .dockerignore
+Create a .dockerignore ﬁle to exclude unnecessary ﬁles from the build
+
+150
+
+context:
+.git
+*.md
+*.log
+
+151
+
+2. Container Resource Management
+
+Set Memory and CPU Limits
+version: '3'
+services:
+app:
+image: myapp
+deploy:
+resources:
+limits:
+cpus: '0.5'
+memory: 512M
+
+Use --cpuset-cpus for CPU Pinning
+docker run --cpuset-cpus="0,1" myapp
+
+152
+
+3. Networking Optimization
+
+Use Host Networking Mode
+For high-performance scenarios, consider using host networking:
+docker run --network host myapp
+
+Optimize DNS Resolution
+If you're experiencing slow DNS resolution, you can use the --dns
+option:
+docker run --dns 8.8.8.8 myapp
+
+153
+
+4. Storage Optimization
+
+Use Volumes Instead of Bind Mounts
+Volumes generally oﬀer better performance than bind mounts:
+version: '3'
+services:
+db:
+image: postgres
+volumes:
+- postgres_data:/var/lib/postgresql/data
+volumes:
+postgres_data:
+
+Consider Using tmpfs Mounts
+For ephemeral data, tmpfs mounts can improve I/O performance:
+docker run --tmpfs /tmp myapp
+
+154
+
+5. Logging and Monitoring
+
+Use the JSON-ﬁle Logging Driver with Limits
+version: '3'
+services:
+app:
+image: myapp
+logging:
+driver: "json-file"
+options:
+max-size: "10m"
+max-file: "3"
+
+Implement Proper Monitoring
+Use tools like Prometheus and Grafana for comprehensive monitoring:
+version: '3'
+services:
+prometheus:
+image: prom/prometheus
+volumes:
+- ./prometheus.yml:/etc/prometheus/prometheus.yml
+grafana:
+image: grafana/grafana
+ports:
+- "3000:3000"
+
+155
+
+6. Docker Daemon Optimization
+
+Adjust the Storage Driver
+Consider using overlay2 for better performance:
+{
+"storage-driver": "overlay2"
+}
+
+Enable Live Restore
+This allows containers to keep running even if the Docker daemon is
+unavailable:
+{
+"live-restore": true
+}
+
+156
+
+7. Application-Level Optimization
+
+Use Alpine-Based Images
+Alpine-based images are typically smaller and faster to pull:
+FROM alpine:3.14
+RUN apk add --no-cache python3
+
+Optimize Your Application Code
+Ensure your application is optimized for containerized environments:
+Implement proper caching mechanisms
+Optimize database queries
+Use asynchronous processing where appropriate
+
+157
+
+8. Benchmarking and Profiling
+
+Use Docker's Built-in Stats Command
+docker stats
+
+Benchmark with Tools Like Apache Bench
+ab -n 1000 -c 100 http://localhost/
+
+158
+
+9. Orchestration-Level Optimization
+When using orchestration tools like Kubernetes:
+
+Use Horizontal Pod Autoscaler
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+name: myapp-hpa
+spec:
+scaleTargetRef:
+apiVersion: apps/v1
+kind: Deployment
+name: myapp
+minReplicas: 2
+maxReplicas: 10
+metrics:
+- type: Resource
+resource:
+name: cpu
+targetAverageUtilization: 50
+
+Implement Proper Liveness and Readiness Probes
+livenessProbe:
+httpGet:
+path: /healthz
+port: 8080
+initialDelaySeconds: 3
+periodSeconds: 3
+
+159
+
+Conclusion
+Optimizing Docker performance is an ongoing process that involves
+various aspects of your Docker setup, from image building to runtime
+conﬁguration and application-level optimizations. By implementing
+these best practices and continuously monitoring your Docker
+environment, you can signiﬁcantly improve the performance and
+eﬃciency of your containerized applications.
+
+160
+
+Chapter 12: Docker
+Troubleshooting and
+Debugging
+
+Even with careful planning and best practices, issues can arise when
+working with Docker. This chapter covers common problems you might
+encounter and provides strategies for eﬀective troubleshooting and
+debugging.
+
+161
+
+1. Container Lifecycle Issues
+
+Container Won't Start
+If a container fails to start, use these commands:
+# View container logs
+docker logs <container_id>
+# Inspect container details
+docker inspect <container_id>
+# Check container status
+docker ps -a
+
+Container Exits Immediately
+For containers that exit right after starting:
+# Run the container in interactive mode
+docker run -it --entrypoint /bin/sh <image_name>
+# Check the ENTRYPOINT and CMD in the Dockerfile
+docker inspect --format='{{.Config.Entrypoint}}' <image_name>
+docker inspect --format='{{.Config.Cmd}}' <image_name>
+
+162
+
+2. Networking Issues
+
+Container Can't Connect to Network
+To troubleshoot network connectivity:
+# Inspect network settings
+docker network inspect <network_name>
+# Check container's network settings
+docker inspect --format='{{range
+.NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
+<container_id>
+# Use a network debugging container
+docker run --net container:<container_id> nicolaka/netshoot
+
+Port Mapping Issues
+If you can't access a container's exposed port:
+# Check port mappings
+docker port <container_id>
+# Verify host machine's firewall settings
+sudo ufw status
+# Test the port directly on the container
+docker exec <container_id> nc -zv localhost <port>
+
+163
+
+3. Storage and Volume Issues
+
+Data Persistence Problems
+For issues with data not persisting:
+# List volumes
+docker volume ls
+# Inspect a volume
+docker volume inspect <volume_name>
+# Check volume mounts in a container
+docker inspect --format='{{range .Mounts}}{{.Source}} ->
+{{.Destination}}{{"\n"}}{{end}}' <container_id>
+
+Disk Space Issues
+If you're running out of disk space:
+# Check Docker disk usage
+docker system df
+# Remove unused data
+docker system prune -a
+# Identify large images
+docker images --format "{{.Size}}\t{{.Repository}}:{{.Tag}}" |
+sort -h
+
+164
+
+4. Resource Constraints
+
+Container Using Too Much CPU or Memory
+To identify and address resource usage issues:
+# Monitor resource usage
+docker stats
+# Set resource limits
+docker run --memory=512m --cpus=0.5 <image_name>
+# Update limits for a running container
+docker update --cpus=0.75 <container_id>
+
+165
+
+5. Image-related Issues
+
+Image Pull Failures
+If you can't pull an image:
+# Check Docker Hub status
+curl -Is https://registry.hub.docker.com/v2/ | head -n 1
+# Verify your Docker login
+docker login
+# Try pulling with verbose output
+docker pull --verbose <image_name>
+
+Image Build Failures
+For issues during image builds:
+# Build with verbose output
+docker build --progress=plain -t <image_name> .
+# Check for issues in the Dockerfile
+docker build --no-cache -t <image_name> .
+
+166
+
+6. Docker Daemon Issues
+
+Docker Daemon Won't Start
+If the Docker daemon fails to start:
+# Check Docker daemon status
+sudo systemctl status docker
+# View Docker daemon logs
+sudo journalctl -u docker.service
+# Restart Docker daemon
+sudo systemctl restart docker
+
+167
+
+7. Debugging Techniques
+
+Interactive Debugging
+To debug a running container interactively:
+# Start an interactive shell in a running container
+docker exec -it <container_id> /bin/bash
+# Run a new container with a shell for debugging
+docker run -it --entrypoint /bin/bash <image_name>
+
+Using Docker Events
+Monitor Docker events for troubleshooting:
+docker events
+
+Logging
+Conﬁgure and view container logs:
+# View container logs
+docker logs <container_id>
+# Follow log output
+docker logs -f <container_id>
+# Adjust logging driver
+docker run --log-driver json-file --log-opt max-size=10m
+<image_name>
+
+168
+
+8. Performance Debugging
+
+Identifying Performance Bottlenecks
+Use these commands to identify performance issues:
+# Monitor container resource usage
+docker stats
+# Profile container processes
+docker top <container_id>
+# Use cAdvisor for more detailed metrics
+docker run \
+--volume=/:/rootfs:ro \
+--volume=/var/run:/var/run:ro \
+--volume=/sys:/sys:ro \
+--volume=/var/lib/docker/:/var/lib/docker:ro \
+--volume=/dev/disk/:/dev/disk:ro \
+--publish=8080:8080 \
+--detach=true \
+--name=cadvisor \
+google/cadvisor:latest
+
+169
+
+9. Docker Compose Troubleshooting
+For issues with Docker Compose:
+# View logs for all services
+docker-compose logs
+# Rebuild and recreate containers
+docker-compose up -d --build
+# Check the configuration
+docker-compose config
+
+170
+
+Conclusion
+Eﬀective troubleshooting and debugging are essential skills for working
+with Docker. By understanding these techniques and tools, you can
+quickly identify and resolve issues in your Docker environment.
+Remember to always check the oﬃcial Docker documentation and
+community forums for the most up-to-date information and solutions to
+common problems.
+
+171
+
+Chapter 13: Advanced Docker
+Concepts and Features
+
+As you become more proﬁcient with Docker, you'll encounter more
+advanced concepts and features. This chapter explores some of these
+topics to help you take your Docker skills to the next level even though
+this is beyond the scope of this introductory ebook.
+
+172
+
+1. Multi-stage Builds
+Multi-stage builds allow you to create more eﬃcient Dockerﬁles by
+using multiple FROM statements in your Dockerﬁle.
+# Build stage
+FROM golang:1.16 AS builder
+WORKDIR /app
+COPY . .
+RUN go build -o main .
+# Final stage
+FROM alpine:latest
+RUN apk --no-cache add ca-certificates
+WORKDIR /root/
+COPY --from=builder /app/main .
+CMD ["./main"]
+
+This approach reduces the ﬁnal image size by only including necessary
+artifacts from the build stage.
+
+173
+
+2. Docker BuildKit
+BuildKit is a next-generation build engine for Docker. Enable it by
+setting an environment variable:
+export DOCKER_BUILDKIT=1
+
+BuildKit oﬀers faster builds, better cache management, and advanced
+features like:
+Concurrent dependency resolution
+Eﬃcient instruction caching
+Automatic garbage collection
+
+174
+
+3. Custom Bridge Networks
+Create isolated network environments for your containers:
+docker network create --driver bridge isolated_network
+docker run --network=isolated_network --name container1 -d
+nginx
+docker run --network=isolated_network --name container2 -d
+nginx
+
+Containers on this network can communicate using their names as
+hostnames.
+
+175
+
+4. Docker Contexts
+Manage multiple Docker environments with contexts:
+# Create a new context
+docker context create my-remote --docker
+"host=ssh://user@remote-host"
+# List contexts
+docker context ls
+# Switch context
+docker context use my-remote
+
+176
+
+5. Docker Content Trust (DCT)
+DCT provides a way to verify the integrity and publisher of images:
+# Enable DCT
+export DOCKER_CONTENT_TRUST=1
+# Push a signed image
+docker push myrepo/myimage:latest
+
+177
+
+6. Docker Secrets
+Manage sensitive data with Docker secrets:
+# Create a secret
+echo "mypassword" | docker secret create my_secret # Use the secret in a service
+docker service create --name myservice --secret my_secret
+myimage
+
+178
+
+7. Docker Health Checks
+Implement custom health checks in your Dockerﬁle:
+HEALTHCHECK --interval=30s --timeout=10s CMD curl -f
+http://localhost/ || exit 1
+
+179
+
+8. Docker Plugins
+Extend Docker's functionality with plugins:
+# Install a plugin
+docker plugin install vieux/sshfs
+# Use the plugin
+docker volume create -d vieux/sshfs -o sshcmd=user@host:/path
+sshvolume
+
+180
+
+9. Docker Experimental Features
+Enable experimental features in your Docker daemon conﬁg
+(/etc/docker/daemon.json):
+{
+"experimental": true
+}
+
+This unlocks features like:
+Checkpoint and restore
+Rootless mode
+
+181
+
+10. Container Escape Protection
+Use security options to prevent container escapes:
+docker run --security-opt="no-new-privileges:true" --capdrop=ALL myimage
+
+182
+
+11. Custom Dockerfile Instructions
+Create custom Dockerﬁle instructions using ONBUILD:
+ONBUILD ADD . /app/src
+ONBUILD RUN /usr/local/bin/python-build --dir /app/src
+
+183
+
+12. Docker Manifest
+Create and push multi-architecture images:
+docker manifest create myrepo/myimage myrepo/myimage:amd64
+myrepo/myimage:arm64
+docker manifest push myrepo/myimage
+
+184
+
+13. Docker Buildx
+Buildx is a CLI plugin that extends the docker build command with the
+full support of the features provided by BuildKit:
+# Create a new builder instance
+docker buildx create --name mybuilder
+# Build and push multi-platform images
+docker buildx build --platform linux/amd64,linux/arm64 -t
+myrepo/myimage:latest --push .
+
+185
+
+14. Docker Compose Profiles
+Use proﬁles in Docker Compose to selectively start services:
+services:
+frontend:
+image: frontend
+profiles: ["frontend"]
+backend:
+image: backend
+profiles: ["backend"]
+
+Start speciﬁc proﬁles:
+docker-compose --profile frontend up -d
+
+186
+
+Conclusion
+These advanced Docker concepts and features provide powerful tools
+for optimizing your Docker workﬂows, improving security, and
+extending Docker's capabilities. As you incorporate these techniques
+into your projects, you'll be able to create more eﬃcient, secure, and
+ﬂexible Docker environments.
+
+187
+
+Chapter 14: Docker in CI/CD
+Pipelines
+
+Integrating Docker into Continuous Integration and Continuous
+Deployment (CI/CD) pipelines can signiﬁcantly streamline the
+development, testing, and deployment processes. This chapter explores
+how to eﬀectively use Docker in CI/CD workﬂows.
+
+188
+
+1. Docker in Continuous Integration
+
+Automated Building and Testing
+Use Docker to create consistent environments for building and testing
+your application:
+# .gitlab-ci.yml example
+build_and_test:
+image: docker:latest
+services:
+- docker:dind
+script:
+- docker build -t myapp:${CI_COMMIT_SHA} .
+- docker run myapp:${CI_COMMIT_SHA} npm test
+
+Parallel Testing
+Leverage Docker to run tests in parallel:
+# GitHub Actions example
+jobs:
+test:
+runs-on: ubuntu-latest
+strategy:
+matrix:
+node-version: [12.x, 14.x, 16.x]
+steps:
+- uses: actions/checkout@v2
+- name: Test with Node.js ${{ matrix.node-version }}
+run: |
+docker build -t myapp:${{ matrix.node-version }} -build-arg NODE_VERSION=${{ matrix.node-version }} .
+docker run myapp:${{ matrix.node-version }} npm test
+
+189
+
+2. Docker in Continuous Deployment
+
+Pushing to Docker Registry
+After successful tests, push your Docker image to a registry:
+# Jenkins pipeline example
+pipeline {
+agent any
+stages {
+stage('Build and Push') {
+steps {
+script {
+docker.withRegistry('https://registry.example.com',
+'credentials-id') {
+def customImage = docker.build("myimage:${env.BUILD_ID}")
+customImage.push()
+}
+}
+}
+}
+}
+}
+
+Deploying with Docker Swarm or Kubernetes
+Use Docker Swarm or Kubernetes for orchestrating deployments:
+# Docker Swarm deployment in GitLab CI
+deploy:
+stage: deploy
+script:
+- docker stack deploy -c docker-compose.yml myapp
+
+For Kubernetes:
+
+190
+
+# Kubernetes deployment in CircleCI
+deployment:
+kubectl:
+command: |
+kubectl set image deployment/myapp
+myapp=myrepo/myapp:${CIRCLE_SHA1}
+
+191
+
+3. Docker Compose in CI/CD
+Use Docker Compose to manage multi-container applications in your
+CI/CD pipeline:
+# Travis CI example
+services:
+- docker
+before_install:
+- docker-compose up -d
+- docker-compose exec -T app npm install
+script:
+- docker-compose exec -T app npm test
+after_success:
+- docker-compose down
+
+192
+
+4. Security Scanning
+Integrate security scanning into your pipeline:
+# GitLab CI with Trivy scanner
+scan:
+image: aquasec/trivy:latest
+script:
+- trivy image myapp:${CI_COMMIT_SHA}
+
+193
+
+5. Performance Testing
+Incorporate performance testing using Docker:
+# Jenkins pipeline with Apache JMeter
+stage('Performance Tests') {
+steps {
+sh 'docker run -v ${WORKSPACE}:/jmeter apache/jmeter n -t test-plan.jmx -l results.jtl'
+perfReport 'results.jtl'
+}
+}
+
+194
+
+6. Environment-Specific Configurations
+Use Docker's environment variables and build arguments for
+environment-speciﬁc conﬁgurations:
+ARG CONFIG_FILE=default.conf
+COPY config/${CONFIG_FILE} /app/config.conf
+
+In your CI/CD pipeline:
+build:
+script:
+- docker build --build-arg CONFIG_FILE=${ENV}.conf -t
+myapp:${CI_COMMIT_SHA} .
+
+195
+
+7. Caching in CI/CD
+Optimize build times by caching Docker layers:
+# GitHub Actions example with caching
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v2
+- name: Cache Docker layers
+uses: actions/cache@v2
+with:
+path: /tmp/.buildx-cache
+key: ${{ runner.os }}-buildx-${{ github.sha }}
+restore-keys: |
+${{ runner.os }}-buildx- name: Build and push
+uses: docker/build-push-action@v2
+with:
+push: true
+tags: user/app:latest
+cache-from: type=local,src=/tmp/.buildx-cache
+cache-to: type=local,dest=/tmp/.buildx-cache
+
+196
+
+8. Blue-Green Deployments with Docker
+Implement blue-green deployments using Docker:
+# Script for blue-green deployment
+#!/bin/bash
+docker service update --image myrepo/myapp:${NEW_VERSION}
+myapp_blue
+docker service scale myapp_blue=2 myapp_green=0
+
+197
+
+9. Monitoring and Logging in CI/CD
+Integrate monitoring and logging solutions:
+# Docker Compose with ELK stack
+version: '3'
+services:
+app:
+image: myapp:latest
+logging:
+driver: "json-file"
+options:
+max-size: "200k"
+max-file: "10"
+elasticsearch:
+image:
+docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+logstash:
+image: docker.elastic.co/logstash/logstash:7.10.0
+kibana:
+image: docker.elastic.co/kibana/kibana:7.10.0
+
+198
+
+Conclusion
+Integrating Docker into your CI/CD pipeline can greatly enhance your
+development and deployment processes. It provides consistency across
+environments, improves testing eﬃciency, and streamlines
+deployments. By leveraging Docker in your CI/CD workﬂows, you can
+achieve faster, more reliable software delivery.
+
+199
+
+Chapter 15: Docker and
+Microservices Architecture
+
+Microservices architecture is an approach to developing a single
+application as a suite of small services, each running in its own process
+and communicating with lightweight mechanisms. Docker's
+containerization technology is an excellent ﬁt for microservices,
+providing isolation, portability, and scalability.
+
+200
+
+1. Principles of Microservices
+Single Responsibility Principle
+Decentralized Data Management
+Failure Isolation
+Scalability
+Technology Diversity
+
+201
+
+2. Dockerizing Microservices
+
+Sample Microservice Dockerﬁle
+FROM node:14-alpine
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["node", "server.js"]
+
+Building and Running
+docker build -t my-microservice .
+docker run -d -p 3000:3000 my-microservice
+
+202
+
+3. Inter-service Communication
+
+REST API
+// Express.js example
+const express = require('express');
+const app = express();
+app.get('/api/data', (req, res) => {
+res.json({ message: 'Data from Microservice A' });
+});
+app.listen(3000, () => console.log('Microservice A listening
+on port 3000'));
+
+Message Queues
+Using RabbitMQ:
+# Dockerfile
+FROM node:14-alpine
+RUN npm install amqplib
+COPY . .
+CMD ["node", "consumer.js"]
+
+203
+
+// consumer.js
+const amqp = require('amqplib');
+async function consume() {
+const connection = await amqp.connect('amqp://rabbitmq');
+const channel = await connection.createChannel();
+await channel.assertQueue('task_queue');
+channel.consume('task_queue', (msg) => {
+console.log("Received:", msg.content.toString());
+channel.ack(msg);
+});
+}
+consume();
+
+204
+
+4. Service Discovery
+Using Consul:
+version: '3'
+services:
+consul:
+image: consul:latest
+ports:
+- "8500:8500"
+service-a:
+build: ./service-a
+environment:
+- CONSUL_HTTP_ADDR=consul:8500
+service-b:
+build: ./service-b
+environment:
+- CONSUL_HTTP_ADDR=consul:8500
+
+205
+
+5. API Gateway
+Using NGINX as an API Gateway:
+http {
+upstream service_a {
+server service-a:3000;
+}
+upstream service_b {
+server service-b:3000;
+}
+server {
+listen 80;
+location /api/service-a {
+proxy_pass http://service_a;
+}
+location /api/service-b {
+proxy_pass http://service_b;
+}
+}
+}
+
+206
+
+6. Data Management
+
+Database per Service
+version: '3'
+services:
+service-a:
+build: ./service-a
+depends_on:
+- db-a
+db-a:
+image: postgres:13
+environment:
+POSTGRES_DB: service_a_db
+POSTGRES_PASSWORD: password
+service-b:
+build: ./service-b
+depends_on:
+- db-b
+db-b:
+image: mysql:8
+environment:
+MYSQL_DATABASE: service_b_db
+MYSQL_ROOT_PASSWORD: password
+
+207
+
+7. Monitoring Microservices
+Using Prometheus and Grafana:
+version: '3'
+services:
+prometheus:
+image: prom/prometheus
+volumes:
+- ./prometheus.yml:/etc/prometheus/prometheus.yml
+ports:
+- "9090:9090"
+grafana:
+image: grafana/grafana
+ports:
+- "3000:3000"
+depends_on:
+- prometheus
+
+208
+
+8. Scaling Microservices
+Using Docker Swarm:
+# Initialize swarm
+docker swarm init
+# Deploy stack
+docker stack deploy -c docker-compose.yml myapp
+# Scale a service
+docker service scale myapp_service-a=3
+
+209
+
+9. Testing Microservices
+
+Unit Testing
+// Jest example
+test('API returns correct data', async () => {
+const response = await request(app).get('/api/data');
+expect(response.statusCode).toBe(200);
+expect(response.body).toHaveProperty('message');
+});
+
+Integration Testing
+version: '3'
+services:
+app:
+build: .
+depends_on:
+- test-db
+test-db:
+image: postgres:13
+environment:
+POSTGRES_DB: test_db
+POSTGRES_PASSWORD: test_password
+test:
+build:
+context: .
+dockerfile: Dockerfile.test
+depends_on:
+- app
+- test-db
+command: ["npm", "run", "test"]
+
+210
+
+10. Deployment Strategies
+
+Blue-Green Deployment
+# Deploy new version (green)
+docker service create --name myapp-green --replicas 2
+myrepo/myapp:v2
+# Switch traffic to green
+docker service update --network-add proxy-network myapp-green
+docker service update --network-rm proxy-network myapp-blue
+# Remove old version (blue)
+docker service rm myapp-blue
+
+211
+
+Conclusion
+Docker provides an excellent platform for developing, deploying, and
+managing microservices. It oﬀers the necessary isolation, portability,
+and scalability that microservices architecture demands. By leveraging
+Docker's features along with complementary tools and services, you
+can build robust, scalable, and maintainable microservices-based
+applications.
+
+212
+
+Chapter 16: Docker for Data
+Science and Machine
+Learning
+
+Docker has become an essential tool in the data science and machine
+learning ecosystem, providing reproducibility, portability, and scalability
+for complex data processing and model training workﬂows.
+
+213
+
+1. Setting Up a Data Science Environment
+
+Jupyter Notebook with Docker
+FROM python:3.8
+RUN pip install jupyter pandas numpy matplotlib scikit-learn
+WORKDIR /notebooks
+EXPOSE 8888
+CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--nobrowser", "--allow-root"]
+
+Running the container:
+docker run -p 8888:8888 -v $(pwd):/notebooks my-datasciencenotebook
+
+214
+
+2. Managing Dependencies with Docker
+
+Using conda in Docker
+FROM continuumio/miniconda3
+COPY environment.yml .
+RUN conda env create -f environment.yml
+SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
+
+215
+
+3. GPU Support for Machine Learning
+
+Using NVIDIA Docker
+FROM nvidia/cuda:11.0-base
+RUN pip install tensorflow-gpu
+COPY train.py .
+CMD ["python", "train.py"]
+
+Running with GPU support:
+docker run --gpus all my-gpu-ml-container
+
+216
+
+4. Distributed Training with Docker Swarm
+
+version: '3'
+services:
+trainer:
+image: my-ml-image
+deploy:
+replicas: 4
+command: ["python", "distributed_train.py"]
+
+217
+
+5. MLOps with Docker
+
+Model Serving with Flask
+from flask import Flask, request, jsonify
+import pickle
+app = Flask(__name__)
+model = pickle.load(open('model.pkl', 'rb'))
+@app.route('/predict', methods=['POST'])
+def predict():
+data = request.json
+prediction = model.predict([data['features']])
+return jsonify({'prediction': prediction.tolist()})
+if __name__ == '__main__':
+app.run(host='0.0.0.0', port=5000)
+
+Dockerﬁle for serving:
+FROM python:3.8
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY app.py .
+COPY model.pkl .
+EXPOSE 5000
+CMD ["python", "app.py"]
+
+218
+
+6. Data Pipeline with Apache Airflow
+
+version: '3'
+services:
+webserver:
+image: apache/airflow
+ports:
+- "8080:8080"
+volumes:
+- ./dags:/opt/airflow/dags
+command: webserver
+scheduler:
+image: apache/airflow
+volumes:
+- ./dags:/opt/airflow/dags
+command: scheduler
+
+219
+
+7. Reproducible Research with Docker
+
+FROM rocker/rstudio
+RUN R -e "install.packages(c('ggplot2', 'dplyr'))"
+COPY analysis.R .
+CMD ["R", "-e", "source('analysis.R')"]
+
+220
+
+8. Big Data Processing with Docker
+
+Spark Cluster
+version: '3'
+services:
+spark-master:
+image: bitnami/spark:3
+environment:
+- SPARK_MODE=master
+ports:
+- "8080:8080"
+spark-worker:
+image: bitnami/spark:3
+environment:
+- SPARK_MODE=worker
+- SPARK_MASTER_URL=spark://spark-master:7077
+depends_on:
+- spark-master
+
+221
+
+9. Automated Machine Learning (AutoML) with
+Docker
+
+FROM python:3.8
+RUN pip install auto-sklearn
+COPY automl_script.py .
+CMD ["python", "automl_script.py"]
+
+222
+
+10. Hyperparameter Tuning at Scale
+Using Optuna with Docker Swarm:
+version: '3'
+services:
+optuna-worker:
+image: my-optuna-image
+deploy:
+replicas: 10
+command: ["python", "optimize.py"]
+optuna-dashboard:
+image: optuna/optuna-dashboard
+ports:
+- "8080:8080"
+
+223
+
+Conclusion
+Docker provides powerful tools for creating reproducible, scalable, and
+portable environments for data science and machine learning
+workﬂows. By leveraging Docker's capabilities, data scientists and ML
+engineers can focus on their core tasks while ensuring their work is
+easily shareable and deployable.
+
+224
+
+What is Docker Swarm mode
+
+According to the oﬃcial Docker docs, a swarm is a group of machines
+that are running Docker and joined into a cluster. If you are running a
+Docker swarm your commands would be executed on a cluster by a
+swarm manager. The machines in a swarm can be physical or virtual.
+After joining a swarm, they are referred to as nodes. I would do a quick
+demo shortly on my DigitalOcean account!
+The Docker Swarm consists of manager nodes and worker nodes.
+The manager nodes dispatch tasks to the worker nodes and on the
+other side Worker nodes just execute those tasks. For High Availability,
+it is recommended to have 3 or 5 manager nodes.
+
+225
+
+Docker Services
+To deploy an application image when Docker Engine is in swarm mode,
+you have create a service. A service is a group of containers of the
+same image:tag. Services make it simple to scale your application.
+In order to have Docker services, you must ﬁrst have your Docker
+swarm and nodes ready.
+
+226
+
+Building a Swarm
+I'll do a really quick demo on how to build a Docker swarm with 3
+managers and 3 workers.
+For that I'm going to deploy 6 droplets on DigitalOcean:
+
+Then once you've got that ready, install docker just as we did in the
+Introduction to Docker Part 1 and then just follow the steps here:
+
+Step 1
+Initialize the docker swarm on your ﬁrst manager node:
+docker swarm init --advertise-addr your_dorplet_ip_here
+
+Step 2
+Then to get the command that you need to join the rest of the
+managers simply run this:
+
+227
+
+docker swarm join-token manager
+
+Note: This would provide you with the exact command that you need to
+run on the rest of the swarm manager nodes. Example:
+
+Step 3
+To get the command that you need for joining workers just run:
+docker swarm join-token worker
+
+The command for workers would be pretty similar to the command for
+join managers but the token would be a bit diﬀerent.
+The output that you would get when joining a manager would look like
+this:
+
+228
+
+Step 4
+Then once you have your join commands, ssh to the rest of your
+nodes and join them as workers and managers accordingly.
+
+229
+
+Managing the cluster
+
+After you've run the join commands on all of your workers and
+managers, in order to get some information for your cluster status you
+could use these commands:
+To list all of the available nodes run:
+docker node ls
+
+Note: This command can only be run from a swarm manager!Output:
+
+To get information for the current state run:
+docker info
+
+Output:
+
+230
+
+231
+
+Promote a worker to manager
+To promote a worker to a manager run the following from one of your
+manager nodes:
+docker node promote node_id_here
+
+Also note that each manager also acts as a worker, so from your docker
+info output you should see 6 workers and 3 manager nodes.
+
+232
+
+Using Services
+In order to create a service you need to use the following command:
+docker service create --name bobby-web -p 80:80 --replicas 5
+bobbyiliev/php-apache
+
+Note that I already have my bobbyiliev/php-apache image pushed to
+the Docker hub as described in the previous blog posts.
+To get a list of your services run:
+docker service ls
+
+Output:
+
+Then in order to get a list of the running containers you need to use the
+following command:
+docker services ps name_of_your_service_here
+
+Output:
+
+233
+
+Then you can visit the IP address of any of your nodes and you should
+be able to see the service! We can basically visit any node from the
+swarm and we will still get the to service.
+
+234
+
+Scaling a service
+We could try shutting down one of the nodes and see how the swarm
+would automatically spin up a new process on another node so that it
+matches the desired state of 5 replicas.
+To do that go to your DigitalOcean control panel and hit the power oﬀ
+button for one of your Droplets. Then head back to your terminal and
+run:
+docker services ps name_of_your_service_here
+
+Output:
+
+In the screenshot above, you can see how I've shutdown the droplet
+called worker-2 and how the replica bobby-web.2 was instantly started
+again on another node called worker-01 to match the desired state of 5
+replicas.
+To add more replicas run:
+docker service scale name_of_your_service_here=7
+
+Output:
+
+235
+
+This would automatically spin up 2 more containers, you can check this
+with the docker service ps command:
+docker service ps name_of_your_service_here
+
+Then as a test try starting the node that we've shutdown and check if it
+picked up any tasks?
+Tip: Bringing new nodes to the cluster does not automatically distribute
+running tasks.
+
+236
+
+Deleting a service
+In order to delete a service, all you need to do is to run the following
+command:
+docker service rm name_of_your_service
+
+Output:
+
+Now you know how to initialize and scale a docker swarm cluster! For
+more information make sure to go through the oﬃcial Docker
+documentation here.
+
+237
+
+Docker Swarm Knowledge Check
+Once you've read this post, make sure to test your knowledge with this
+Docker Swarm Quiz:
+https://quizapi.io/predeﬁned-quizzes/common-docker-swarm-interview-q
+uestions
+
+238
+
+Conclusion
+
+Congratulations! You have just completed the Docker basics eBook! I
+hope that it was helpful and you've managed to learn some cool new
+things about Docker!
+If you found this helpful, be sure to star the project on GitHub!
+If you have any suggestions for improvements, make sure to contribute
+pull requests or open issues.
+In this introduction to Docker eBook, we just covered the basics, but
+you still have enough under your belt to start working with Docker
+containers and images!
+As a next step make sure to spin up a few servers, install Docker and
+play around with all of the commands that you've learnt from this
+eBook!
+In case that this eBook inspired you to contribute to some fantastic
+open-source project, make sure to tweet about it and tag @bobbyiliev_
+so that we could check it out!
+Congrats again on completing this eBook!
+
+239
+
+Other eBooks
+Some other eBooks that you might ﬁnd helpful are:
+Introduction to Git and GitHub
+Introduction to Bash Scripting
+Introduction to SQL
+Introduction to Linux
+
+240
+
+
